@@ -8,20 +8,10 @@
         <meta name="Keywords" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
         
-        <!-- Include jQuery -->
-        <?php echo $html->js('jquery-1.4.2.min'); ?>
-        <!-- Default css file -->
-        <?php echo $html->css('default'); ?>
-        
-        <!-- Default js file -->
-        <?php echo $html->js('default'); ?>
-
-        <?php
-        //Custom calls for css
-        echo $html->customCss($this->_css);
-        //Custom calls for js
-        echo $html->customJs($this->_js);
-        ?>
+        <?=$html->js('jquery-1.6.3.min');?>
+        <?=$html->customJs(); ?>
+        <?=$html->css('default'); ?>
+        <?=$html->customCss($this->_css);?>
     </head>
     <body>
         <!-- This is a content that will be included on page inside of this layout -->
