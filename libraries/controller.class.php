@@ -11,7 +11,7 @@ class Controller
         protected $_template;
         protected $db;
         
-        public $renderHTML = 0;
+        public $renderHTML = 1;
         
         /**
          * Constructor
@@ -111,12 +111,12 @@ class Controller
         }
         
         /**
-         * Set to render HTML in Ajax call
-         * @return void
+         * Set status
+         * @param type $status 
          */
-        public function renderHTML()
+        public function setRenderHTML($status)
         {
-                $this->renderHTML = 1;
+                $this->renderHTML = $status;
         }
         
 }

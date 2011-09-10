@@ -76,7 +76,7 @@ class Template
         
         extract($this->variables);
         
-        if(file_exists(LAYOUT_PATH.$this->_layout.'Layout.php')){
+        if(file_exists(LAYOUT_PATH.$this->_layout.'Layout.php') && $renderHTML){
             include (LAYOUT_PATH.$this->_layout.'Layout.php');
         }else{
             include (LAYOUT_PATH.'emptyLayout.php');

@@ -15,33 +15,11 @@ class Model
          */
         function __construct()
         {
-                $this->_dbHandle = @mysql_connect(DB_HOST, DB_USER, DB_PASS);
-        if ($this->_dbHandle != 0) {
-            if (mysql_select_db(DB_NAME, $this->_dbHandle)){
-                @mysql_query("SET NAMES 'utf8'", $this->_dbHandle);
-                @mysql_query("SET CHARACTER_SET_CLIENT=utf8", $this->_dbHandle);
-                @mysql_query("SET CHARACTER_SET_RESULTS=utf8", $this->_dbHandle);
-                @mysql_query("SET CHARACTER_SET_CONNECTION=utf8", $this->_dbHandle);
-                
-                return true;   
-            }else{
-                
-                return false;
+            try {
+                $dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=UTF-8", DB_USER, DB_PASS);
+            }catch(PDOException $e){
+                echo $e->getMessage();
             }
-        } else{
-            
-            return false;
-        }
-        }
-
-        /**
-         * Get error string
-         * @return string
-         */
-        function getError() 
-        {
-        
-            return mysql_error($this->_dbHandle);
         }
     
         /**
