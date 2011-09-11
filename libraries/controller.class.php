@@ -24,7 +24,7 @@ class Controller
         {
                 
                 //Check if cms for session
-                if($layout === 'cms')
+                if($layout == 'cms')
                 {
                     $this->userInfoAndSession();
                 }
@@ -51,8 +51,8 @@ class Controller
          */
         public function userInfoAndSession()
         {
-            if(!isset($_SESSION['belvi'])){
-                $this->redirect('login', '');
+            if(!isset($_SESSION['cms'])){
+                $this->redirect(BASE_PATH.'login'.DS, '');
             }
             
         }

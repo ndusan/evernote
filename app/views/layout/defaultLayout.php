@@ -7,7 +7,7 @@
         <meta name="Description" content="" />
         <meta name="Keywords" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
-        <?=$html->js('jquery-1.6.3.min');?>
+        <?=$html->assetsJs('jquery-1.6.3.min');?>
         <?=$html->customJs(); ?>
         <?=$html->css('default'); ?>
         <?=$html->customCss($this->_css);?>

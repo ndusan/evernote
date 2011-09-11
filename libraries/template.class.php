@@ -79,7 +79,7 @@ class Template
         if(file_exists(LAYOUT_PATH.$this->_layout.'Layout.php') && $renderHTML){
             include (LAYOUT_PATH.$this->_layout.'Layout.php');
         }else{
-            include (LAYOUT_PATH.'emptyLayout.php');
+            include (LAYOUT_FULL_PATH.'emptyLayout.php');
         }
     }
     

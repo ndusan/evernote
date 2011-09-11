@@ -21,6 +21,7 @@ define('CONTROLLER_PATH', 'app'.DS.'controllers'.DS);
 define('MODEL_PATH', 'app'.DS.'models'.DS);
 define('VIEW_PATH', 'app'.DS.'views'.DS);
 define('LAYOUT_PATH', 'app'.DS.'views'.DS.'layout'.DS);
+define('LAYOUT_FULL_PATH', $_SERVER['DOCUMENT_ROOT'].DS.'app'.DS.'views'.DS.'layout'.DS);
 
 //Logs
 define('LOG_PATH', 'tmp'.DS.'logs'.DS);

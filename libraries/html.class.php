@@ -59,7 +59,31 @@ class HTML
          */
         function js($fileName) 
         {
-                $data = "<script src='".ASSETS_JS_PATH.$fileName."' type='text/javascript'></script>\n";
+                $data = "<script src='".JS_PATH.$fileName.".js' type='text/javascript'></script>\n";
+                
+                return $data;
+        }
+        
+        /**
+         * Include JS
+         * @param $fileName
+         * @return string
+         */
+        function assetsJs($fileName) 
+        {
+                $data = "<script src='".ASSETS_JS_PATH.$fileName.".js' type='text/javascript'></script>\n";
+                
+                return $data;
+        }
+        
+        /**
+         * Include CSS
+         * @param $fileName
+         * @return string
+         */
+        function assetsCss($fileName) 
+        {
+                $data = "<link href='".ASSETS_CSS_PATH.$fileName.".css' rel='stylesheet' type='text/css'/>\n";
                 
                 return $data;
         }
