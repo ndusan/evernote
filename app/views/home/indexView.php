@@ -1,1 +1,3 @@
-home page
+
+
+<a href="/quiz">Start quiz</a>

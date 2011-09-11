@@ -8,7 +8,8 @@ var App = App || {};
     	},
     	init: function() {
     		var body = document.body, controller = body.getAttribute( "data-controller" ), method = body.getAttribute( "data-method" );
-    		App.Core.exec(controller); App.Core.exec(controller, method);
+    		App.Core.exec(controller);
+    		App.Core.exec(controller, method);
     	}
     };
     $(document).ready(App.Core.init);
