@@ -7,7 +7,7 @@
 class Model
 {
         
-        protected $_dbHandle;
+        protected $dbh;
         
         /**
          * Contructor
@@ -16,7 +16,7 @@ class Model
         function __construct()
         {
             try {
-                $dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=UTF-8", DB_USER, DB_PASS);
+                $this->dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=UTF-8", DB_USER, DB_PASS);
             }catch(PDOException $e){
                 echo $e->getMessage();
             }

@@ -12,6 +12,12 @@ $routes = array(
             'action'     => 'index', 
             'layout'     => 'login'
     ),
+    //Logout page
+    array(  'url'        => '/^logout\/?$/', 
+            'controller' => 'login', 
+            'action'     => 'logout', 
+            'layout'     => 'empty'
+    ),
     //CMS home page
     array(  'url'        => '/^cms\/?$/', 
             'controller' => 'cms_home', 
@@ -22,7 +28,7 @@ $routes = array(
     array(  'url'        => '/^cms\/user\/?$/', 
             'controller' => 'cms_user', 
             'action'     => 'index', 
-            'layout'     => 'default'
+            'layout'     => 'cms'
     ),
     array(  'url'        => '/^cms\/user\/add\/?$/', 
             'controller' => 'cms_user', 

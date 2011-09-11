@@ -8,12 +8,12 @@
         <meta name="Keywords" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
         
-        <?=$html->js('jquery-1.6.3.min');?>
+        <?=$html->assetsJs('jquery-1.6.3.min');?>
         <?=$html->customJs(); ?>
         <?=$html->css('default'); ?>
         <?=$html->customCss($this->_css);?>
     </head>
-    <body>
+    <body data-controller="<?=$this->_controller;?>" data-action="<?=$this->_action;?>">
         <!-- This is a content that will be included on page inside of this layout -->
         <?php if(file_exists(VIEW_PATH.$this->_controller.DS.$this->_action.'View.php')) include (VIEW_PATH.$this->_controller.DS.$this->_action.'View.php'); ?>
     </body>
