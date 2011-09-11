@@ -10,12 +10,13 @@
         
         <?=$html->assetsJs('jquery-1.6.3.min');?>
         <?=$html->assetsJs('jquery.dataTables.min');?>
+        <?=$html->assetsJs('app');?>
         <?=$html->customJs(); ?>
         <?=$html->assetsCss('demo_table');?>
         <?=$html->css('default'); ?>
         <?=$html->customCss($this->_css);?>
     </head>
-    <body data-controller="<?=$this->_controller;?>" data-action="<?=$this->_action;?>">
+    <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
         <ul>
             <li>
                 <a href="/logout">Logout</a>

@@ -119,4 +119,32 @@ class Controller
                 $this->renderHTML = $status;
         }
         
+        /**
+         * Is ajax
+         * @return type 
+         */
+        protected function isAjax()
+        {
+
+            return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ? true : false;
+        }
+        
+        
+        protected function setToken($length = "")
+        {	
+            $code = md5(uniqid(rand(), true));
+            if ($length != ""){
+                
+                return substr($code, 0, $length);
+            }else{
+                
+                return $code;
+            }
+        }
+        
+        protected function checkToken($session)
+        {
+            
+            return isset($session['token']) && !empty($session['token']) ? true : false; 
+        }
 }
