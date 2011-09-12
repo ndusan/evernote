@@ -4,25 +4,30 @@
             <tr>
                 <th>First name</th>
                 <td>
-                    <input type="text" name="user[firstname]" value="<?=$user['firstname']; ?>" />
+                    <input class="jr" type="text" name="user[firstname]" value="<?=$user['firstname']; ?>" />
                 </td>
             </tr>
             <tr>
                 <th>Last name</th>
                 <td>
-                    <input type="text" name="user[lastname]" value="<?=$user['lastname']; ?>" />
+                    <input class="jr" type="text" name="user[lastname]" value="<?=$user['lastname']; ?>" />
                 </td>
             </tr>
             <tr>
                 <th>Email</th>
                 <td>
-                    <input type="text" name="user[email]" value="<?=$user['email']; ?>" />
+                    <?if($this->_action == 'edit'):?>
+                    <strong><?=$user['email']; ?></strong>
+                    <input type="hidden" name="user[email]" value="<?=$user['email']; ?>" />
+                    <? else:?>
+                    <input class="jr email" type="text" name="user[email]" value=""/>
+                    <?endif?>
                 </td>
             </tr>
             <tr>
                 <th>Password</th>
                 <td>
-                    <input type="text" name="user[password]" value="" />
+                    <input <?=($this->_action == 'add' ? 'class="jr"' : '');?> type="text" name="user[password]" value="" />
                 </td>
             </tr>
         </tbody>

@@ -4,13 +4,13 @@
             <tr>
                 <th>Title</th>
                 <td>
-                    <input type="text" name="question[title]" value="<?=$question['title']; ?>" />
+                    <input type="text" name="question[title]" class="jr" value="<?=$question['title']; ?>" />
                 </td>
             </tr>
             <tr>
                 <th>Text</th>
                 <td>
-                    <textarea name="question[text]" ><?=$question['text'];?></textarea>
+                    <textarea  class="jr" name="question[text]" ><?=$question['text'];?></textarea>
                 </td>
             </tr>
             <tr>
@@ -52,7 +52,7 @@
                     </select>
                 </td>
                 <td>
-                    <input type="text" name="answer[text][]" value="<?=$answer['text'];?>" />
+                    <input  class="jr" type="text" name="answer[text][]" value="<?=$answer['text'];?>" />
                     <input type="hidden" name="answer[id][]" value="<?=$answer['id'];?>" />
                 </td>
             </tr>
