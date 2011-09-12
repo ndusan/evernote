@@ -28,7 +28,7 @@ class Controller
                 {
                     $this->userInfoAndSession();
                 }
-            
+                
                 //Model file
                 $modelFile = strtolower($controller)."Model.php";
                 $modelName = ucfirst($controller)."Model";
