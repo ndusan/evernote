@@ -17,7 +17,7 @@
         <?=$html->customCss($this->_css);?>
     </head>
     <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
-        <ul>
+        <ul class="cmsMenu">
             <li>
                 <a href="/logout">Logout</a>
             </li>
