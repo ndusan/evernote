@@ -10,7 +10,7 @@ em,strong{}
 ol,ul {list-style:none;}
 caption {text-align:center;}
 th {text-align:left;}
-h1,h2,h3,h4,h5,h6 {margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6 {margin:0; padding:0; color:#f0397b;}
 q:before,q:after {content:'';}
 abbr,acronym { border:0;}
 
@@ -20,7 +20,7 @@ h3 {font-size:18px;}
 h4 {font-size:16px;}
 
 /*MAIN*/
-body {font-size:13px; color:#555; font-family:arial,sans-serif;}
+body {font-size:13px; color:#444; font-family:arial,sans-serif; background:#bdbdbd url(../images/bkg.jpg) scroll repeat-x 0 0;}
 a {color:#f0397b; outline:none; text-decoration:none;}
 a:hover {text-decoration:underline;}
 img {border: none; vertical-align: middle;}
@@ -31,19 +31,24 @@ label {padding:2px 0; display:block;}
 .fr {float:right;}
 
 
-input[type=text], input[type=password], textarea {padding:5px 10px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; width: 150px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3) inset;}
+input[type=text], input[type=password], textarea {padding:5px 10px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3) inset;}
 input[type=text]:focus, input[type=password]:focus, textarea:focus {background-color:#FFF;}
 input[type=submit] {padding:10px 15px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3);}
 input[type=submit]:hover {color:#f0397b; border-color:#C6C6C6; cursor:pointer;}
 select {padding:5px 10px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3) inset;}
 select:focus {background-color:#FFF;}
 /*SPRITE*/
+.noResults {padding:20px 30px; color:#FFF; background-color:#9CC4E4;}
 
 /*BUILD*/
 .login {width:400px; position:absolute; top:30%; left:50%; margin:0 0 0 -200px;}
 .login td {padding:5px;}
 .login th {padding:10px 5px;}
 
-.cmsContent {width:90%; padding:20px; margin:0 auto;}
-.cmsMenu {overflow:hidden; width:90%; padding:20px 20px 0; margin:0 auto;}
-.cmsMenu li {float:right; padding:5px 0; margin-left:20px;}
+.cmsContent {width:90%;  padding:20px; margin:0 auto; background:transparent url(../images/gradient.jpg) scroll no-repeat 50% 0;}
+.cmsMenu {overflow:hidden; width:90%; padding:20px 20px 0; margin:0 auto; height:38px; background:transparent url(../images/topbar-bkg.jpg) scroll no-repeat 50% 0;}
+.cmsMenu li {float:right; padding:5px 10px; border-left:solid 1px #CCC;}
+
+.addContent {overflow:hidden; padding:20px; background-color:#FFF;}
+.addContent td {padding:5px; vertical-align:top;}
+.addContent th {padding:10px 5px;}
