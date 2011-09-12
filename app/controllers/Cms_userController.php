@@ -3,25 +3,49 @@
 class Cms_userController extends Controller
 {
     
-    public function indexAction()
+    public function indexAction($params)
     {
-        
-        
+        parent::set('userCollection', $this->db->findUsers());
     }
     
-    public function addAction()
+    public function addAction($params)
     {
        
+        if(!empty($params['submit'])){
+            //Data submited
+            
+            if($this->db->createUser($params['user'])){
+                parent::redirect ('cms'.DS.'users', 'success');
+            }else{
+                parent::redirect ('cms'.DS.'users'.DS.'add', 'error');
+            }
+        }
     }
     
     public function editAction($params)
     {
        
+        if(!empty($params['submit'])){
+            //Data submited
+            
+            if($this->db->updateUser($params['user'])){
+                parent::redirect ('cms'.DS.'users', 'success');
+            }else{
+                parent::redirect ('cms'.DS.'users'.DS.'edit'.$params['id'], 'error');
+            }
+        }
+        
+        parent::set('user', $this->db->findUser($params['id']));
     }
     
-    public function delete($params)
+    public function deleteAction($params)
     {
         parent::setRenderHTML(0);
+        if($this->db->deleteUser($params)){
+            parent::redirect ('cms'.DS.'users', 'success');
+        }else{
+            parent::redirect ('cms'.DS.'users', 'error');
+        }
     }
     
 }

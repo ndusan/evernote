@@ -19,6 +19,29 @@
     <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
         <ul>
             <li>
+                <ul>
+                    <li>
+                        <a href="/cms/users">Users</a>
+                    </li>
+                    <li>
+                        <a href="/cms/user/add">Add new user</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="/cms/questions">Questions</a>
+                    </li>
+                    <li>
+                        <a href="/cms/question/add">Add new question</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/logout">Logout</a>
+            </li>
+            <li>
                 <a href="/logout">Logout</a>
             </li>
         </ul>

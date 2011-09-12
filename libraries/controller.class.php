@@ -57,6 +57,12 @@ class Controller
             
         }
         
+        public function getSession()
+        {
+            
+            return $_SESSION['cms'];        
+        }
+        
         /**
          * Set variables
          * @param String $name

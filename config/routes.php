@@ -35,7 +35,7 @@ $routes = array(
             'layout'     => 'cms'
     ),
     //CMS user page
-    array(  'url'        => '/^cms\/user\/?$/', 
+    array(  'url'        => '/^cms\/users\/?$/', 
             'controller' => 'cms_user', 
             'action'     => 'index', 
             'layout'     => 'cms'
@@ -53,6 +53,32 @@ $routes = array(
     array(  'url'        => '/^cms\/user\/delete\/(?P<id>\d*)\/?$/', 
             'controller' => 'cms_user', 
             'action'     => 'delete', 
+            'layout'     => 'cms'
+    ),
+    //CMS questions page
+    array(  'url'        => '/^cms\/questions\/?$/', 
+            'controller' => 'cms_question', 
+            'action'     => 'index', 
+            'layout'     => 'cms'
+    ),
+    array(  'url'        => '/^cms\/question\/add\/?$/', 
+            'controller' => 'cms_question', 
+            'action'     => 'add', 
+            'layout'     => 'cms'
+    ),
+    array(  'url'        => '/^cms\/question\/edit\/(?P<id>\d*)\/?$/', 
+            'controller' => 'cms_question', 
+            'action'     => 'edit', 
+            'layout'     => 'cms'
+    ),
+    array(  'url'        => '/^cms\/question\/delete\/(?P<id>\d*)\/?$/', 
+            'controller' => 'cms_question', 
+            'action'     => 'delete', 
+            'layout'     => 'cms'
+    ),
+    array(  'url'        => '/^cms\/question\/status\/(?P<id>\d*)\/?$/', 
+            'controller' => 'cms_question', 
+            'action'     => 'status', 
             'layout'     => 'cms'
     ),
 );
