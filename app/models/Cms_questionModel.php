@@ -63,7 +63,7 @@ class Cms_questionModel extends Model
             $stmt->bindParam(':text', $params['question']['text'], PDO::PARAM_STR);
             $stmt->bindParam(':levelId', $params['question']['level_id'], PDO::PARAM_INT);
             
-            $openField = ($params['question']['level_id'] > 10 ? 1 : 0);
+            $openField = ($params['question']['level_id'] > 5 ? 1 : 0);
             $stmt->bindParam(':openField', $openField, PDO::PARAM_INT);
             
             $stmt->execute();
@@ -101,7 +101,7 @@ class Cms_questionModel extends Model
             $stmt->bindParam(':text', $params['question']['text'], PDO::PARAM_STR);
             $stmt->bindParam(':levelId', $params['question']['level_id'], PDO::PARAM_INT);
             
-            $openField = ($params['question']['level_id'] > 10 ? 1 : 0);
+            $openField = ($params['question']['level_id'] > 5 ? 1 : 0);
             $stmt->bindParam(':openField', $openField, PDO::PARAM_INT);
             $stmt->bindParam(':id', $params['question']['id'], PDO::PARAM_INT);
             $stmt->execute();

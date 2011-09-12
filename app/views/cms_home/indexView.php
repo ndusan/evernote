@@ -16,7 +16,7 @@
             <td><?=$participant['lastname'];?></td> 
             <td><?=$participant['email'];?></td> 
             <td><?=$participant['created'];?></td> 
-            <td><?=$participant['correct_answers'];?>/10</td> 
+            <td><?=$participant['correct_answers'];?>/5</td> 
         </tr> 
         <? endforeach;?>
     </tbody> 
