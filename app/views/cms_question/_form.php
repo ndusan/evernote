@@ -1,5 +1,5 @@
 <form action="/cms/question/<?=$question['formAction']; ?>" method="post">
-    <table >
+    <table id="questionForm">
         <tbody>
             <tr>
                 <th>Title</th>
@@ -17,12 +17,12 @@
                 <th>Level</th>
                 <td>
                     <? if(!empty($levelCollection)):?>
-                    <select name="question[level_id]">
+                    <select id="level" name="question[level_id]">
                     <? foreach($levelCollection as $level):?>
                         <? if(isset($question['level_id']) && $level['id'] == $question['level_id']) $sel = 'selected="selected"';
                            else $sel = '';
                         ?>
-                        <option value="<?=$level['id'];?>" <?=$sel;?>><?=$level['name'];?></option>
+                        <option tabindex="<?=$level['rating'];?>" value="<?=$level['id'];?>" <?=$sel;?>><?=$level['name'];?></option>
                     <? endforeach; ?>
                     </select>
                     <? else: ?>
@@ -35,7 +35,7 @@
     
     <!-- Answers -->
     <? $answerCollection = !empty($answerCollection) ? $answerCollection : array(null, null, null);?>
-    <table>
+    <table id="answerForm">
         <thead>
             <tr>
                 <th>Status</th>

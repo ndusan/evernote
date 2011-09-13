@@ -72,14 +72,16 @@ class Cms_questionModel extends Model
             $this->updateQuestionAmountOnLevel($params['question']['level_id']);
             
             //Add answers
-            foreach($params['answer']['status'] as $key => $status){
-                $query = sprintf("INSERT INTO %s SET `text`=:text, `status`=:status, `question_id`=:questionId", $this->tableAnswer);
-                $stmt = $this->dbh->prepare($query);
+            if(!empty($params['answer']['status'])){
+                foreach($params['answer']['status'] as $key => $status){
+                    $query = sprintf("INSERT INTO %s SET `text`=:text, `status`=:status, `question_id`=:questionId", $this->tableAnswer);
+                    $stmt = $this->dbh->prepare($query);
 
-                $stmt->bindParam(':text', $params['answer']['text'][$key], PDO::PARAM_STR);
-                $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-                $stmt->bindParam(':questionId', $newId, PDO::PARAM_INT);
-                $stmt->execute();
+                    $stmt->bindParam(':text', $params['answer']['text'][$key], PDO::PARAM_STR);
+                    $stmt->bindParam(':status', $status, PDO::PARAM_STR);
+                    $stmt->bindParam(':questionId', $newId, PDO::PARAM_INT);
+                    $stmt->execute();
+                }
             }
             
             return true;
@@ -109,15 +111,17 @@ class Cms_questionModel extends Model
             $this->updateQuestionAmountOnLevel($params['question']['level_id']);
             
             //Edit answers
-            foreach($params['answer']['status'] as $key => $status){
-                $query = sprintf("UPDATE %s SET `text`=:text, `status`=:status WHERE `id`=:id AND `question_id`=:questionId", $this->tableAnswer);
-                $stmt = $this->dbh->prepare($query);
+            if(!empty($params['answer']['status'])){
+                foreach($params['answer']['status'] as $key => $status){
+                    $query = sprintf("UPDATE %s SET `text`=:text, `status`=:status WHERE `id`=:id AND `question_id`=:questionId", $this->tableAnswer);
+                    $stmt = $this->dbh->prepare($query);
 
-                $stmt->bindParam(':text', $params['answer']['text'][$key], PDO::PARAM_STR);
-                $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-                $stmt->bindParam(':id', $params['answer']['id'][$key], PDO::PARAM_INT);
-                $stmt->bindParam(':questionId', $params['question']['id'], PDO::PARAM_INT);
-                $stmt->execute();
+                    $stmt->bindParam(':text', $params['answer']['text'][$key], PDO::PARAM_STR);
+                    $stmt->bindParam(':status', $status, PDO::PARAM_STR);
+                    $stmt->bindParam(':id', $params['answer']['id'][$key], PDO::PARAM_INT);
+                    $stmt->bindParam(':questionId', $params['question']['id'], PDO::PARAM_INT);
+                    $stmt->execute();
+                }
             }
             
             return true;

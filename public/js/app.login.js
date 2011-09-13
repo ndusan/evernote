@@ -3,6 +3,9 @@ var App = App || {};
     App.Login = {
         init: function() {
             
+            //On load
+            $('#login_email').focus();
+            
             //Set check on required fields
             $('body').delegate('form', 'submit', function(){
                 var allOk = true;

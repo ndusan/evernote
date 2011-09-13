@@ -18,6 +18,24 @@ var App = App || {};
                 
                 if(!allOk) return false;
             });
+            
+            //On change
+            $('select').change(function(e){
+                e.preventDefault();
+                if($('select option:selected').attr('tabindex') > 5){
+                    //Hide 
+                    $('#answerForm').hide();
+                    $('#answerForm input').each(function(){
+                        $(this).removeClass('jr');
+                    });
+                }else{
+                    //Show
+                    $('#answerForm').show();
+                    $('#answerForm input').each(function(){
+                        $(this).addClass('jr');
+                    });
+                }
+            });
         },
         index: function() {
             
