@@ -17,31 +17,32 @@
         <?= $html->customCss($this->_css); ?>
     </head>
     <body data-controller="<?= $this->_controller; ?>" data-method="<?= $this->_action; ?>">
-        <ul class="cmsMenu">
-            <li>
-                <a href="/logout">Logout</a>
-            </li>
-            <li>
-                <a href="/cms/users">Users</a>
-            </li>
-            <li>
-                <a href="/cms/user/add">Add new user</a>
-            </li>
-            <li>
-                <a href="/cms/questions">Questions</a>
-            </li>
-            <li>
-                <a href="/cms/question/add">Add new question</a>
-            </li>
-            <li>
-                <a href="/cms">Participants</a>
-            </li>
-
-        </ul>
-        <div class="cmsContent">
-            <!-- This is a content that will be included on page inside of this layout -->
-            <?php if (file_exists(VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'))
-                include (VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'); ?>
+        <div class="wrapper">
+            <ul class="cmsMenu">
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+                <li class="active">
+                    <a href="/cms/users">Users</a>
+                </li>
+                <li>
+                    <a href="/cms/user/add">Add new user</a>
+                </li>
+                <li>
+                    <a href="/cms/questions">Questions</a>
+                </li>
+                <li>
+                    <a href="/cms/question/add">Add new question</a>
+                </li>
+                <li>
+                    <a href="/cms">Participants</a>
+                </li>
+            </ul>
+            <div class="cmsContent">
+                <!-- This is a content that will be included on page inside of this layout -->
+                <?php if (file_exists(VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'))
+                    include (VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'); ?>
+            </div>
         </div>
     </body>
 </html>

@@ -34,4 +34,4 @@
     <div class="noResults">
         There are no results on this page.
     </div>
-<? endif; ?>		
+	

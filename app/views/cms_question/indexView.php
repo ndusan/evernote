@@ -1,5 +1,6 @@
-<a href="/cms/question/add" >Add new question</a>
-
+<ul class="addTop">
+    <li><a href="/cms/question/add" >Add new question</a></li>
+</ul>
 <? if (!empty($questionCollection)): ?>
     <table cellpadding="0" cellspacing="0" border="0" class="display" id="questionsTable"> 
         <thead> 

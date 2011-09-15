@@ -1,6 +1,6 @@
 var App = App || {};
 (function($) {
-    App.Cms_question = {
+    App.Login = {
         init: function() {
             
             //Set check on required fields
@@ -18,11 +18,6 @@ var App = App || {};
                 
                 if(!allOk) return false;
             });
-        },
-        index: function() {
-            
-            //Set datatable
-            $('#questionsTable').dataTable();
         }
     };
 })(this.jQuery)

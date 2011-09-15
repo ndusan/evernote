@@ -20,6 +20,8 @@ class Cms_userController extends Controller
                 parent::redirect ('cms'.DS.'users'.DS.'add', 'error');
             }
         }
+        
+        parent::set('params', $params);
     }
     
     public function editAction($params)
@@ -35,6 +37,7 @@ class Cms_userController extends Controller
             }
         }
         
+        parent::set('params', $params);
         parent::set('user', $this->db->findUser($params['id']));
     }
     

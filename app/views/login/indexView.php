@@ -12,7 +12,7 @@
                         <label for="login_email">Email:</label>
                     </td>
                     <td>
-                        <input id="login_email" type="text" name="login[email]" value="" />
+                        <input class="jr" id="login_email" type="text" name="login[email]" value="" />
                     </td>
                     <td>
                         <span>
@@ -25,7 +25,7 @@
                         <label for="login_password">Password:</label>
                     </td>
                     <td>
-                        <input id="login_password" type="password" name="login[password]" value="" />
+                        <input class="jr" id="login_password" type="password" name="login[password]" value="" />
                     </td>
                     <td>
                         <span>

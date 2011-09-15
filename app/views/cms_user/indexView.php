@@ -1,4 +1,6 @@
-<a href="/cms/user/add" >Add new user</a>
+<ul class="addTop">
+    <li><a href="/cms/user/add" >Add new user</a></li>
+</ul>
 
 
 <? if (!empty($userCollection)): ?>
