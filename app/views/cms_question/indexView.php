@@ -26,7 +26,7 @@
                         <? $status = array('0' => 'Inactive', '1' => 'Active'); ?>
                         <a href="/cms/question/status/<?= $question['id']; ?>"><?= $status[1 - $question['status']]; ?></a>
                         <!--Delete-->
-                        <a href="/cms/question/delete/<?= $question['id']; ?>">Delete</a>
+                        <a href="/cms/question/delete/<?= $question['id']; ?>" class="jw">Delete</a>
                     </td> 
                 </tr> 
             <? endforeach; ?>

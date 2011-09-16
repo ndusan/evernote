@@ -6,6 +6,7 @@ class Cms_questionModel extends Model
     private $tableLevel = 'levels';
     private $tableQuestion = 'questions';
     private $tableAnswer = 'answers';
+    private $tableParticipantQuestion = 'participant_question';
 
     public function getLevels()
     {
@@ -180,6 +181,33 @@ class Cms_questionModel extends Model
             $query = sprintf("UPDATE %s SET status=1-status WHERE `id`=:id", $this->tableQuestion);
             $stmt = $this->dbh->prepare($query);
             $stmt->bindParam(':id', $params['id'], PDO::PARAM_INT);
+            $stmt->execute();
+            
+            return true;
+        }catch(Exception $e){
+            
+            return false;
+        }
+    }
+    
+    
+    public function deleteQuestion($id)
+    {
+        
+        try{
+            $query = sprintf("DELETE FROM %s WHERE `id`=:id", $this->tableQuestion);
+            $stmt = $this->dbh->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            
+            $query = sprintf("DELETE FROM %s WHERE `question_id`=:id", $this->tableAnswer);
+            $stmt = $this->dbh->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            
+            $query = sprintf("DELETE FROM %s WHERE `question_id`=:id", $this->tableParticipantQuestion);
+            $stmt = $this->dbh->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
             
             return true;

@@ -26,7 +26,7 @@
                         <a href="/cms/user/edit/<?= $user['id']; ?>">Edit</a>
                         <!--Delete-->
                         <? if ($user['id'] !== $_SESSION['cms']['id']): ?>
-                            <a href="/cms/user/delete/<?= $user['id']; ?>">Delete</a>
+                            <a href="/cms/user/delete/<?= $user['id']; ?>" class="jw">Delete</a>
                         <? endif; ?>
                     </td> 
                 </tr> 

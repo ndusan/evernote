@@ -10,6 +10,7 @@ var App = App || {};
     		var body = document.body, controller = body.getAttribute( "data-controller" ), method = body.getAttribute( "data-method" );
     		App.Core.exec(controller);
     		App.Core.exec(controller, method);
+                App.Core.exec('Common', 'init');
     	}
     };
     $(document).ready(App.Core.init);

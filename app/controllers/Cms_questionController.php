@@ -54,7 +54,7 @@ class Cms_questionController extends Controller
     public function deleteAction($params)
     {
         parent::setRenderHTML(0);
-        if($this->db->deleteQuestion($params)){
+        if($this->db->deleteQuestion($params['id'])){
             parent::redirect ('cms'.DS.'questions', 'success');
         }else{
             parent::redirect ('cms'.DS.'questions', 'error');

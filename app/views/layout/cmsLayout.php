@@ -13,7 +13,7 @@
         <?= $html->assetsJs('app'); ?>
         <?= $html->customJs(); ?>
         <?= $html->assetsCss('demo_table'); ?>
-        <?= $html->css('default'); ?>
+        <?= $html->css('cms'); ?>
         <?= $html->customCss($this->_css); ?>
     </head>
     <body data-controller="<?= $this->_controller; ?>" data-method="<?= $this->_action; ?>">

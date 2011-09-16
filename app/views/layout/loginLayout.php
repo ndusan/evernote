@@ -11,7 +11,7 @@
         <?=$html->assetsJs('jquery-1.6.3.min');?>
         <?=$html->assetsJs('app');?>
         <?=$html->customJs(); ?>
-        <?=$html->css('default'); ?>
+        <?=$html->css('cms'); ?>
         <?=$html->customCss($this->_css);?>
     </head>
     <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
