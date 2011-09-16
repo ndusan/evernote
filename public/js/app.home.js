@@ -8,10 +8,10 @@ var App = App || {};
         quiz: function() {
 
             //Request to post 
-            $('#quiz').delegate('form', 'submit', function(e){
+            $('#jquiz').delegate('form', 'submit', function(e){
                 e.preventDefault();
                 var allOk = false;
-
+                
                 //Proces only if one answer selected
                 $('input[type=radio]').each(function(){
                     if($(this).is(':checked')) allOk = true;
@@ -24,10 +24,10 @@ var App = App || {};
                         dataType:   'html',
                         data:       $(this).serialize(),
                         beforeSend: function() {
-                            $('#quiz').addClass('loader');
+                            $('#jquiz').addClass('loader');
                         },
                         success:    function(response){
-                            $('#quiz').removeClass('loader').html(response);
+                            $('#jquiz').removeClass('loader').html(response);
                         }
                     });
                 }else{

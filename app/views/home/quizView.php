@@ -8,7 +8,7 @@
             <div class="stepCounter">
                 Question <span>1</span> of 10
             </div>
-            <form action="/quiz" type="post">
+            <form action="/quiz" method="post">
                 <ul class="answers">
                     <li><input id="choice_1" type="radio" name="choice" value="1" />
                         <label for="choice_1">Goulash</label></li>

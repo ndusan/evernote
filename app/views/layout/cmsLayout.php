@@ -21,7 +21,7 @@
         <div class="wrapper">
             <ul class="cmsMenu">
                 <li>
-                    <a href="/logout">Logout</a>
+                    <a href="/logout" class="jl">Logout</a>
                 </li>
                 <li <?=($this->_controller == 'cms_user' ? 'class="active"' : '');?>>
                     <a class="users" href="/cms/users">Users</a>
@@ -39,8 +39,23 @@
                     include (VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'); ?>
             </div>
         </div>
-        <div id="jerror" class="jnotif">
-            
+        <? if(isset($_GET['q'])):?>
+        <?
+        switch($_GET['q']){
+            case 'error': $status = 'error'; $jmsg = 'There has been error in your request. Please, try again.'; break;
+            case 'success': $status = 'success'; $jmsg = 'Your request has been processed successfully.'; break;
+            case 'welcome': $status = 'success'; $jmsg = 'Welcome to admin CMS.'; break;
+            default: $status = ''; $jmsg = ''; //error
+        }
+        ?>
+        <div id="j<?=$status;?>" class="jnotif">
+            <?=$jmsg;?>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.jnotif').fadeOut(2000);
+            });
+        </script>
+        <? endif;?>
     </body>
 </html>
