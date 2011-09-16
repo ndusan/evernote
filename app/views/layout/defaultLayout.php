@@ -12,7 +12,7 @@
         <?=$html->customJs(); ?>
         <?=$html->css('default'); ?>
         <?=$html->customCss($this->_css);?>
-        
+        <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     </head>
     <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
         <!-- This is a content that will be included on page inside of this layout -->
