@@ -25,26 +25,25 @@ class HomeController extends Controller
     
     public function quizAction($params)
     {
+        
         //Quiz should not start if there is no session token
         if(!parent::checkToken($_SESSION['quiz'])) parent::redirect ('', 'warning');
         
         if(!empty($params['choice'])){//data posted
-            if(parent::isAjax()){
-                //Ajax call
-
-                
-                
-                
-            }else{
-                //Reglar post call - Ajax off
-            
-                
-                
-            }
+            print_r($params);exit;
+            $this->processStep($params, $_SESSION['quiz'], parent::isAjax());
             $_SESSION['quiz']['page'] += 1;
         }
         
         parent::set('page', $_SESSION['quiz']['page']);
         parent::set('token', $_SESSION['quiz']['token']);
+    }
+    
+    
+    
+    
+    public function processStep($params = array(), $session = array(), $isAjax)
+    {
+        
     }
 }

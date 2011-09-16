@@ -11,9 +11,9 @@
                 <ul class="answers">
                     <li><input id="choice_1" type="radio" name="choice" value="1" />
                         <label for="choice_1">Goulash</label></li>
-                    <li class="selected"> <input id="choice_2" type="radio" name="choice" value="2" />
+                    <li> <input id="choice_2" type="radio" name="choice" value="2" />
                         <label for="choice_2">Pizza</label></li>
-                    <li><input id="choice_3" type="radio" name="choice" value="" />
+                    <li><input id="choice_3" type="radio" name="choice" value="3" />
                         <label for="choice_3">Smoked salmon</label></li>
                 </ul>
                 <!-- security information -->
