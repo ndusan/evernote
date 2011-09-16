@@ -8,7 +8,7 @@ var App = App || {};
                 if (!answer) return false;
             });
             
-            $('.jlogout').click(function(){
+            $('.jl').click(function(){
                 var answer = confirm ("Are you sure you want to logout?");
                 if (!answer) return false;
             });

@@ -21,7 +21,7 @@
         <div class="wrapper">
             <ul class="cmsMenu">
                 <li>
-                    <a href="/logout" clas="jlogout">Logout</a>
+                    <a href="/logout" class="jl">Logout</a>
                 </li>
                 <li <?=($this->_controller == 'cms_user' ? 'class="active"' : '');?>>
                     <a class="users" href="/cms/users">Users</a>
