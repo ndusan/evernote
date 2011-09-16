@@ -1,3 +1,4 @@
 nbproject
 tmp/
-config/
+config/config.php
+config/config.php.dist
