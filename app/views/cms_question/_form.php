@@ -65,7 +65,7 @@
                                 </td>
                                 <td>
                                     <input type="text" name="answer[text][]" value="<?= $answer['text']; ?>" class="jr"/>
-                                    <input type="hidden" name="answer[id][]" value="<?= $answer['id']; ?>" class="jr"/>
+                                    <input type="hidden" name="answer[id][]" value="<?= $answer['id']; ?>"/>
                                 </td>
                             </tr>
                         <? endforeach; ?>
