@@ -17,6 +17,7 @@
         <?= $html->customCss($this->_css); ?>
     </head>
     <body data-controller="<?= $this->_controller; ?>" data-method="<?= $this->_action; ?>">
+        
         <div class="wrapper">
             <ul class="cmsMenu">
                 <li>
@@ -37,6 +38,9 @@
                 <?php if (file_exists(VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'))
                     include (VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'); ?>
             </div>
+        </div>
+        <div id="jerror" class="jnotif">
+            
         </div>
     </body>
 </html>

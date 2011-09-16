@@ -40,9 +40,9 @@ select:focus {background-color:#FFF;}
 
 /*SPRITE*/
 .noResults {padding:20px 30px; color:#FFF; background-color:#9CC4E4;}
-.jerror, .jsuccess {position:fixed; width:300px; line-height:20px; padding:20px 0; color:#FFF; font-size:14px; text-align:center; top:100px; left:50%; margin:0 0 0 -150px;}
-.jerror {background-color:red;}
-.jsuccess {background-color:green;}
+.jnotif {display:none; position:fixed; width:300px; line-height:20px; padding:20px 0; color:#FFF; font-size:14px; text-align:center; top:0px; left:50%; margin:0 0 0 -150px; border-radius:0 0 5px 5px;}
+#jerror {background-color:#d86363; display:block;}
+#jsuccess {background-color:#8ebf2b; display:block;}
 
 /*BUILD*/
 .login {width:400px; position:absolute; top:30%; left:50%; margin:0 0 0 -200px;}
