@@ -22,13 +22,13 @@
                 <li>
                     <a href="/logout">Logout</a>
                 </li>
-                <li class="active">
+                <li <?=($this->_controller == 'cms_user' ? 'class="active"' : '');?>>
                     <a class="users" href="/cms/users">Users</a>
                 </li>
-                <li>
+                <li <?=($this->_controller == 'cms_question' ? 'class="active"' : '');?>>
                     <a class="questions" href="/cms/questions">Questions</a>
                 </li>
-                <li>
+                <li <?=($this->_controller == 'cms_home' ? 'class="active"' : '');?>>
                     <a class="dashboard" href="/cms">Dashboard</a>
                 </li>
             </ul>
