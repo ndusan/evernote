@@ -8,16 +8,15 @@ var App = App || {};
         quiz: function() {
 
             //Select anwser
-            $('.answers').delegate('li', 'click', function(e){
-               e.preventDefault();
+            $('.answers').delegate('li', 'click', function(){
                
                var currInput = $(this).find('input');
                
                $('.answers li').each(function(){
                   if($(this).find('input').val() != currInput.val()){
-                      $(this).removeClass('selected').find('input').attr('checked', false);
+                      $(this).removeClass('selected').find('input').attr('checked');
                   }else{
-                      $(this).addClass('selected').find('input').attr('checked', true);
+                      $(this).addClass('selected').find('input').attr('checked', 'checked');
                   }
                });
             });
@@ -29,7 +28,7 @@ var App = App || {};
                 
                 //Process only if one answer selected
                 $('input[type=radio]').each(function(){
-                    if($(this).is(':checked')) allOk = true;
+                    if($(this).attr('checked')) allOk = true;
                 });
                 
                 if(allOk){
