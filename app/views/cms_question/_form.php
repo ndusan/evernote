@@ -32,7 +32,7 @@
                                                 
                                                 
                                                 ?>
-                                            <option tabindex="<?= $level['rating']; ?>" value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
+                                            <option label="<?=$level['rating'];?>" value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
                                             <? endforeach; ?>
                                         </select>
                                     <? else: ?>

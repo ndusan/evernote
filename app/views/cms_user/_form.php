@@ -25,6 +25,7 @@
                                     <input type="text" class="jr" name="user[email]" value="" />
                                     <? else: ?>
                                     <strong><?= $user['email']; ?></strong>
+                                    <input type="hidden" name="user[email]" value="<?=$user['email'];?>" />
                                     <? endif; ?>
                                 </td>
                             </tr>
