@@ -21,7 +21,7 @@ h4 {font-size:16px;}
 
 /*MAIN*/
 body {font-size:18px; color:#474b56; font-family:Georgia,serif; background:transparent url(../images/quiz_bg.jpg) scroll 50% 0;}
-a {color:#474b56; outline:none; text-decoration:none;}
+a {color:#5d616a; outline:none; text-decoration:none;}
 a:hover {text-decoration:none; color:#35a8bd;}
 img {border: none; vertical-align: middle;}
 label {padding:0; cursor:pointer;}
@@ -32,20 +32,21 @@ label {padding:0; cursor:pointer;}
 /*SPRITE*/
 
 /*BUILD*/
-.quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; height:165px; margin:30px 0 0; padding:65px 0 0; text-align:center;}
+.quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; height:145px; margin:20px 0 0; padding:65px 0 0; text-align:center;}
 .quizStart {background:transparent url(../images/quizStart_bg.png) scroll no-repeat 50% 0; padding:60px 0 0; height:450px;}
 .quizSteps {background:transparent url(../images/quizSteps_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:550px;}
 .quizIntro {width:220px; margin:0 auto; position:relative; text-align:center;}
 .quizReady {padding:50px 0;}
 .quizIntro p {font-size:18px; padding:10px 0; line-height:25px;}
-.stepsContent {width:760px; margin:0 auto;}
+.stepsContent {width:760px; margin:0 auto; position:relative;}
 .stepCounter {line-height:40px; text-align:right; color:#35a8bd;}
 
-.answers {padding:60px 0 0; width:600px; height:180px;}
+.answers {padding:60px 0 0; width:600px; height:220px;}
 .answers li {line-height:50px; padding:0 0 0 75px;}
 .answers li:hover {cursor:pointer; color:#35a8bd;}
 .answers .selected {background:transparent url(../images/selected.png) scroll no-repeat 10px 0;}
-.answers li input {visibility:hidden;}
-.question {line-height:60px; padding:0 0 0 10px;}
-.trigger {font-family: 'Architects Daughter', cursive; font-size:26px; line-height:80px; font-weight:bold; border:none; background:transparent;}
+.answers li input[type=radio] {visibility:hidden;}
+.question {line-height:55px; padding:0 0 0 10px;}
+.trigger {font-family: 'Architects Daughter', cursive; font-size:26px; color:#474b56; line-height:80px; font-weight:bold; border:none; background:transparent;}
 .trigger:hover {color:#35a8bd; cursor:pointer;}
+.stepsContent .trigger {position:absolute; top:50%; right:10px; margin:-30px 0 0;}
