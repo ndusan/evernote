@@ -7,12 +7,27 @@ var App = App || {};
         
         quiz: function() {
 
+            //Select anwser
+            $('.answers').delegate('li', 'click', function(e){
+               e.preventDefault();
+               
+               var currInput = $(this).find('input');
+               
+               $('.answers li').each(function(){
+                  if($(this).find('input').val() != currInput.val()){
+                      $(this).removeClass('selected').find('input').attr('checked', false);
+                  }else{
+                      $(this).addClass('selected').find('input').attr('checked', true);
+                  }
+               });
+            });
+            
             //Request to post 
             $('#jquiz').delegate('form', 'submit', function(e){
                 e.preventDefault();
                 var allOk = false;
                 
-                //Proces only if one answer selected
+                //Process only if one answer selected
                 $('input[type=radio]').each(function(){
                     if($(this).is(':checked')) allOk = true;
                 });
