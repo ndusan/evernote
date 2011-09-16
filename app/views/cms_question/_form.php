@@ -1,36 +1,38 @@
+<form action="/cms/question/<?= $question['formAction']; ?>" method="post">
 <div class="addContent">
     <table cellpadding="0" cellspacing="0" width="100%">
-
         <tr><td>
                 <h3>Question :</h3>
-                <form action="/cms/question/<?= $question['formAction']; ?>" method="post">
                     <table >
                         <tbody>
                             <tr>
                                 <th>Title</th>
                                 <td>
-                                    <input type="text" name="question[title]" value="<?= $question['title']; ?>" />
+                                    <input type="text" name="question[title]" class="jr" value="<?= $question['title']; ?>" />
                                 </td>
                             </tr>
                             <tr>
                                 <th>Text</th>
                                 <td>
-                                    <textarea name="question[text]" ><?= $question['text']; ?></textarea>
+                                    <textarea name="question[text]" class="jr"><?= $question['text']; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Level</th>
                                 <td>
+                                    <? $removeAnswers = false; ?>
                                     <? if (!empty($levelCollection)): ?>
                                         <select name="question[level_id]">
                                             <? foreach ($levelCollection as $level): ?>
                                                 <?
-                                                if (isset($question['level_id']) && $level['id'] == $question['level_id'])
+                                                if (isset($question['level_id']) && $level['id'] == $question['level_id']){
                                                     $sel = 'selected="selected"';
-                                                else
-                                                    $sel = '';
+                                                    $removeAnswers = ($level['rating'] > 5) ? true : false;
+                                                }else $sel = '';
+                                                
+                                                
                                                 ?>
-                                                <option value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
+                                            <option tabindex="<?= $level['rating']; ?>" value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
                                             <? endforeach; ?>
                                         </select>
                                     <? else: ?>
@@ -41,7 +43,7 @@
                         </tbody>
                     </table>
             </td>
-            <td>
+            <td id="answerForm">
                 <h3>Answers :</h3>
                 <!-- Answers -->
                 <? $answerCollection = !empty($answerCollection) ? $answerCollection : array(null, null, null); ?>
@@ -62,15 +64,13 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <input type="text" name="answer[text][]" value="<?= $answer['text']; ?>" />
-                                    <input type="hidden" name="answer[id][]" value="<?= $answer['id']; ?>" />
+                                    <input type="text" name="answer[text][]" value="<?= $answer['text']; ?>" class="jr"/>
+                                    <input type="hidden" name="answer[id][]" value="<?= $answer['id']; ?>" class="jr"/>
                                 </td>
                             </tr>
                         <? endforeach; ?>
                     </tbody>
                 </table>
-                
-                </form>
             </td>
         </tr>
         <tr>
@@ -79,6 +79,16 @@
                 <input type="submit" name="submit" value="Save" />
             </td>
         </tr>
-            
     </table>
 </div>
+</form>
+<? if($removeAnswers):?>
+<script type='text/javascript'>
+    $(document).ready(function(){
+        $('#answerForm').hide();
+        $('#answerForm input').each(function(){
+            $(this).removeClass('jr');
+        });
+    });
+</script>
+<? endif;?>
