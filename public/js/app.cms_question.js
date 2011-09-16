@@ -22,7 +22,7 @@ var App = App || {};
             //On change
             $('select').change(function(e){
                 e.preventDefault();
-                if($('select option:selected').attr('label') > 5){
+                if($('select option:selected').attr('class') > 5){
                     //Hide 
                     $('#answerForm').hide();
                     $('#answerForm input').each(function(){

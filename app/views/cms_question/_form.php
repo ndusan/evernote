@@ -32,7 +32,7 @@
                                                 
                                                 
                                                 ?>
-                                            <option label="<?=$level['rating'];?>" value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
+                                            <option class="<?=$level['rating'];?>" value="<?= $level['id']; ?>" <?= $sel; ?>><?= $level['name']; ?></option>
                                             <? endforeach; ?>
                                         </select>
                                     <? else: ?>
