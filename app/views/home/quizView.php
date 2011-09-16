@@ -1,4 +1,3 @@
-
 <div class="quizWrapper">
     <div class="quizTop">
         main logo
