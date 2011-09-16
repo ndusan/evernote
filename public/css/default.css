@@ -22,7 +22,7 @@ h4 {font-size:16px;}
 /*MAIN*/
 body {font-size:16px; color:#474b56; font-family:Georgia,serif; background:transparent url(../images/quiz_bg.jpg) scroll 50% 0;}
 a {color:#474b56; outline:none; text-decoration:none;}
-a:hover {text-decoration:underline; color:#f0397b}
+a:hover {text-decoration:none; color:#35a8bd;}
 img {border: none; vertical-align: middle;}
 label {padding:0;}
 .cl {clear:both; line-height:0;}
@@ -42,6 +42,7 @@ label {padding:0;}
 .stepCounter {line-height:40px; text-align:right; color:#35a8bd;}
 
 .answers {padding:60px 0 0; width:600px; height:180px;}
-.answers li {line-height:50px; padding:0 0 0 95px;}
+.answers li {line-height:50px; padding:0 0 0 75px;}
+.answers li input {visibility:hidden;}
 .question {line-height:55px; padding:0 0 0 10px;}
 .trigger {font-family: 'Architects Daughter', cursive; font-size:26px; line-height:80px; font-weight:bold; border:none; background:transparent;}
