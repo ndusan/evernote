@@ -141,10 +141,10 @@ class Controller
             $code = md5(uniqid(rand(), true));
             if ($length != ""){
                 
-                return substr($code, 0, $length);
+                return substr($code, 0, $length).'-'.time();
             }else{
                 
-                return $code;
+                return $code.'-'.time();
             }
         }
         

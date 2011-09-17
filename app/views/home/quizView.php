@@ -21,7 +21,7 @@
                     <!-- security information -->
                     <input type="hidden" name="token" value="<?= $token; ?>" />
                     <input type="hidden" name="page" value="<?= $page; ?>" />
-
+                    <input type="hidden" name="q_id" value="<?= $question['id']; ?>" />
                     <input class="trigger" type="submit" name="submit" value="Next&raquo;" />
                     <div class="notificator">
                         please pick one answer
@@ -31,13 +31,12 @@
                     <?= $question['text']; ?>
                 </div>
             </div>
+        <? else: ?>
+
+            <div class="noContent">Sorry, no quiz for you at this time. Come back soon.</div>
+
+        <? endif; ?>
+        <div class="quizBottom">
+            2 logos
         </div>
-    <? else: ?>
-
-        <div class="noContent">Sorry, no quiz for you at this time. Come back soon.</div>
-
-    <? endif; ?>
-    <div class="quizBottom">
-        2 logos
     </div>
-</div>

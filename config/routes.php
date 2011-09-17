@@ -16,6 +16,21 @@ $routes = array(
             'action'     => 'quiz', 
             'layout'     => 'ajax'
     ),
+    array(  'url'        => '/^quiz\/extra\/?$/', 
+            'controller' => 'home', 
+            'action'     => 'extra', 
+            'layout'     => 'default'
+    ),
+    array(  'url'        => '/^quiz\/form\/?$/', 
+            'controller' => 'home', 
+            'action'     => 'form', 
+            'layout'     => 'default'
+    ),
+    array(  'url'        => '/^quiz\/score\/?$/', 
+            'controller' => 'home', 
+            'action'     => 'score', 
+            'layout'     => 'default'
+    ),
     //Login page
     array(  'url'        => '/^login\/?$/', 
             'controller' => 'login', 
