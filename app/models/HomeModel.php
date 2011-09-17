@@ -131,7 +131,7 @@ class HomeModel extends Model
             $stmt = $this->dbh->prepare($query);
             
             //This is hardcoded
-            $rating = 11;
+            $rating = 6;
             
             $stmt->bindParam(':rating', $rating, PDO::PARAM_INT);
             $stmt->execute();
