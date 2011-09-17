@@ -8,7 +8,7 @@ var App = App || {};
         quiz: function() {
 
             //Select anwser
-            $('.answers').delegate('li', 'click', function(){
+            $('#jquiz').delegate('.answers li', 'click', function(){
                
                var currInput = $(this).find('input');
                

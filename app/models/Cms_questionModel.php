@@ -138,7 +138,7 @@ class Cms_questionModel extends Model
     {
         try{
             $query = sprintf("SELECT `a`.`id`, `a`.`title`, `a`.`text`, `a`.`created`, `a`.`status`, `b`.`name`, `b`.`rating` FROM %s AS `a`
-                                LEFT JOIN %s AS `b` ON `b`.`id`=`a`.`level_id` ORDER BY `a`.`created` DESC", $this->tableQuestion, $this->tableLevel);
+                                INNER JOIN %s AS `b` ON `b`.`id`=`a`.`level_id` ORDER BY `a`.`created` DESC", $this->tableQuestion, $this->tableLevel);
             $stmt = $this->dbh->prepare($query);
             $stmt->execute();
 

@@ -9,19 +9,19 @@ var App = App || {};
                 
                 $('.jr').each(function(){
                     if($(this).val().length <= 0){
+                        console.log($(this));
                         $(this).addClass('warning');
                         allOk = false;
                     }else{
                         $(this).removeClass('warning');
                     }
                 });
-                
                 if(!allOk) return false;
             });
             
             //On change
-            $('select').change(function(e){
-                e.preventDefault();
+            $('#level').change(function(){
+                
                 if($('select option:selected').attr('class') > 5){
                     //Hide 
                     $('#answerForm').hide();

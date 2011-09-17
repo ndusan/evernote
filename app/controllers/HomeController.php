@@ -1,21 +1,23 @@
 <?php
 class HomeController extends Controller
-
 {
     
     public function indexAction()
     {
+        
         //Check if session
         if(!isset($_SESSION['quiz'])){
+
             //First time
-            
             $_SESSION['quiz'] = array('page' => 1, 'token' => parent::setToken(10));
+            
             //Inject in DB
             $this->db->addParticipant($_SESSION['quiz']['token'], $_SERVER);
         }else{
+
             //Same user
-            
             $_SESSION['quiz'] = array('page' => 1, 'token' => $_SESSION['quiz']['token']);
+            
             //Inject in DB
             $this->db->addParticipant($_SESSION['quiz']['token'], $_SERVER);
         }
@@ -23,15 +25,20 @@ class HomeController extends Controller
         
     }
     
+    
+    
     public function quizAction($params)
     {
+        if(!parent::checkToken($_SESSION['quiz'])) parent::redirect ('', 'session_expire');
         
-        //Quiz should not start if there is no session token
-        if(!parent::checkToken($_SESSION['quiz'])) parent::redirect ('', 'warning');
+        //Get question
+        $question = $this->db->getQuestion($_SESSION['quiz']['page']);
+        parent::set('question', $question);
+        parent::set('answers', $this->db->getAnswers($question['id']));
         
-        if(!empty($params['choice'])){//data posted
-            print_r($params);exit;
-            $this->processStep($params, $_SESSION['quiz'], parent::isAjax());
+        if(!empty($params['choice']) && parent::isAjax()){//data posted
+            
+            if(!$this->processStep($params, $_SESSION['quiz'])) parent::redirect('', 'session_expire');
             $_SESSION['quiz']['page'] += 1;
         }
         
@@ -42,8 +49,9 @@ class HomeController extends Controller
     
     
     
-    public function processStep($params = array(), $session = array(), $isAjax)
+    public function processStep($params = array(), $session = array())
     {
         
+        return true;
     }
 }

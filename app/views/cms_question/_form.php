@@ -22,7 +22,7 @@
                                 <td>
                                     <? $removeAnswers = false; ?>
                                     <? if (!empty($levelCollection)): ?>
-                                        <select name="question[level_id]">
+                                        <select name="question[level_id]" id="level">
                                             <? foreach ($levelCollection as $level): ?>
                                                 <?
                                                 if (isset($question['level_id']) && $level['id'] == $question['level_id']){
