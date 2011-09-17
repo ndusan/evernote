@@ -25,13 +25,13 @@ var App = App || {};
                 if($('select option:selected').attr('class') > 5){
                     //Hide 
                     $('#answerForm').hide();
-                    $('#answerForm input').each(function(){
+                    $('#answerForm input[type="text"]').each(function(){
                         $(this).removeClass('jr');
                     });
                 }else{
                     //Show
                     $('#answerForm').show();
-                    $('#answerForm input').each(function(){
+                    $('#answerForm input[type="text"]').each(function(){
                         $(this).addClass('jr');
                     });
                 }
