@@ -158,15 +158,15 @@ class HomeModel extends Model
         
         try{
             
-            $participantId = $this->getParticipant($session['token']);
+            $participant = $this->getParticipant($session['token']);
             
             //Inject response
             $query = sprintf("INSERT INTO %s SET `participant_id`=:participantId, 
                                                  `question_id`=:questionId,
                                                  `status`=:status", $this->tableParticipantQuestion);
             $stmt = $this->dbh->prepare($query);
-
-            $stmt->bindParam(':participantId', $paticipantId, PDO::PARAM_INT);
+            
+            $stmt->bindParam(':participantId', $participant['id'], PDO::PARAM_INT);
             $stmt->bindParam(':questionId', $params['q_id'], PDO::PARAM_INT);
             $stmt->bindParam(':status', $this->checkAnswer($params['choice']), PDO::PARAM_STR);
             $stmt->execute();
@@ -186,7 +186,7 @@ class HomeModel extends Model
         
         try{
 
-            $paticipantId = $this->getParticipant($session['token']);
+            $participant = $this->getParticipant($session['token']);
             
             //Inject response
             $query = sprintf("INSERT INTO %s SET `participant_id`=:participantId, 
@@ -197,7 +197,7 @@ class HomeModel extends Model
 
             $status = 'correct';
             
-            $stmt->bindParam(':participantId', $paticipantId, PDO::PARAM_INT);
+            $stmt->bindParam(':participantId', $participant['id'], PDO::PARAM_INT);
             $stmt->bindParam(':questionId', $params['q_id'], PDO::PARAM_INT);
             $stmt->bindParam(':status', $status, PDO::PARAM_STR);
             $stmt->bindParam(':openAnswer', $params['open_choice'], PDO::PARAM_STR);

@@ -140,7 +140,7 @@ class HomeController extends Controller
     {
         
         //Process regular step
-        $this->db->processStep($params, $session);
+        return $this->db->processStep($params, $session);
         
     }
     
