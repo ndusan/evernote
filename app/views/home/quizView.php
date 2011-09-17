@@ -14,7 +14,7 @@
                     <? foreach($answers as $answer):?>
                     <li>
                         <input id="choice_<?=$answer['id'];?>" type="radio" name="choice" value="<?=$answer['id'];?>" />
-                        <label for="choice_<?=$answer['id'];?>"><?=$answer['status'];?></label>
+                        <label for="choice_<?=$answer['id'];?>"><?=$answer['text'];?></label>
                     </li>
                     <? endforeach;?>
                 </ul>

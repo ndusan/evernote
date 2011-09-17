@@ -52,6 +52,6 @@ class HomeController extends Controller
     public function processStep($params = array(), $session = array())
     {
         
-        
+        return true;
     }
 }

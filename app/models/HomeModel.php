@@ -37,12 +37,12 @@ class HomeModel extends Model
             $opt = array('1'=>'1','2'=>'1','3'=>'2','4'=>'2','5'=>'3','6'=>'3','7'=>'4','8'=>'4','9'=>'5','10'=>'5');
             $level = $opt[$page];
 
-            $query = sprintf("SELECT FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`level_id` 
-                                WHERE `b`.`rating`=:rating AND `a`.`status`=:status", $this->tableQuestion, $this->tableLevel);
+            $query = sprintf("SELECT `a`.* FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`level_id` 
+                                WHERE `b`.`rating`=:level AND `a`.`status`=:status", $this->tableQuestion, $this->tableLevel);
             $stmt = $this->dbh->prepare($query);
-
+            
             $status = 1;
-            $stmt->bindParam(':rating', $level, PDO::PARAM_INT);
+            $stmt->bindParam(':level', $level, PDO::PARAM_INT);
             $stmt->bindParam(':status', $status, PDO::PARAM_INT);
             $stmt->execute();
 
@@ -58,7 +58,7 @@ class HomeModel extends Model
     public function getAnswers($questionId)
     {
         try{
-            $query = sprintf("SELECT FROM %s WHERE `question_id`=:questionId", $this->tableAnswer);
+            $query = sprintf("SELECT * FROM %s WHERE `question_id`=:questionId", $this->tableAnswer);
             $stmt = $this->dbh->prepare($query);
 
             $stmt->bindParam(':questionId', $questionId, PDO::PARAM_INT);
