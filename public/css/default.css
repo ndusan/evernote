@@ -33,8 +33,8 @@ label {padding:0; cursor:pointer;}
 
 /*BUILD*/
 .quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; height:145px; margin:20px 0 0; padding:65px 0 0; text-align:center;}
-.quizStart {background:transparent url(../images/quizStart_bg.png) scroll no-repeat 50% 0; padding:60px 0 0; height:450px;}
-.quizSteps {background:transparent url(../images/quizSteps_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:550px;}
+.quizStart {background:transparent url(../images/quizStart_bg.png) scroll no-repeat 50% 0; padding:60px 0 0; height:450px; text-shadow:0 1px 1px #FFF;}
+.quizSteps {background:transparent url(../images/quizSteps_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:550px; text-shadow:0 1px 1px #FFF;}
 .quizIntro {width:220px; margin:0 auto; position:relative; text-align:center;}
 .quizReady {padding:50px 0;}
 .quizIntro p {font-size:18px; padding:10px 0; line-height:25px;}
@@ -47,6 +47,6 @@ label {padding:0; cursor:pointer;}
 .answers .selected {background:transparent url(../images/selected.png) scroll no-repeat 10px 0;}
 .answers li input[type=radio] {visibility:hidden;}
 .question {line-height:55px; padding:0 0 0 10px;}
-.trigger {font-family: 'Architects Daughter', cursive; font-size:26px; color:#474b56; line-height:80px; font-weight:bold; border:none; background:transparent;}
+.trigger {font-family: 'Architects Daughter', cursive; font-size:26px; color:#474b56; line-height:80px; font-weight:bold; border:none; background:transparent; text-shadow:0 1px 1px #FFF;}
 .trigger:hover {color:#35a8bd; cursor:pointer;}
 .stepsContent .trigger {position:absolute; top:50%; right:10px; margin:-30px 0 0;}

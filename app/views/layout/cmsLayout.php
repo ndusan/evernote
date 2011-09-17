@@ -53,8 +53,9 @@
         </div>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('.jnotif').fadeOut(2000);
+                $('.jnotif').delay(3000).fadeOut(1000);
             });
+            
         </script>
         <? endif;?>
     </body>

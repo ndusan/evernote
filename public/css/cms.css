@@ -31,7 +31,7 @@ label {padding:0 0 10px; display:block;}
 .fr {float:right;}
 
 
-input[type=text], input[type=password], textarea {padding:5px 10px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3) inset;}
+input[type=text], input[type=password], textarea {padding:5px 45px 5px 10px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.3) inset;}
 input[type=text]:focus, input[type=password]:focus, textarea:focus {background-color:#FFF;}
 input[type=submit] {padding:10px 15px; background-color:#FDFDFD; border: 1px solid #D6D6D6; font-family: Arial,Helvetica,sans-serif; font-size:13px; box-shadow: 0px 1px 2px rgba(200, 200, 200, 0.3);}
 input[type=submit]:hover {color:#f0397b; border-color:#C6C6C6; cursor:pointer;}
@@ -40,7 +40,8 @@ select:focus {background-color:#FFF;}
 
 /*SPRITE*/
 .noResults {padding:20px 30px; color:#FFF; background-color:#9CC4E4;}
-.jnotif {display:none; position:fixed; width:300px; line-height:20px; padding:20px 0; color:#FFF; font-size:14px; text-align:center; top:0px; left:50%; margin:0 0 0 -150px; border-radius:0 0 5px 5px;}
+.jnotif {display:none; position:fixed; width:260px; line-height:20px; padding:20px; color:#FFF; font-size:14px; text-align:center; top:0px; left:50%; margin:0 0 0 -150px; border-radius:0 0 5px 5px;}
+.warning {background:transparent url(../images/warning.png) scroll no-repeat 100% 50%;}
 #jerror {background-color:red; display:block;}
 #jsuccess {background-color:#8ebf2b; display:block;}
 
@@ -55,6 +56,7 @@ select:focus {background-color:#FFF;}
 .cmsMenu {position:relative; height:39px; margin:0 20px; background-color:#FDFDFD; border:solid 1px #cdcdcd; border-bottom:none;}
 .cmsMenu li {float:right; padding:10px 15px; border-left:solid 1px #CCC; line-height:20px;}
 .cmsMenu .active {background-color:#FFF;}
+.cmsContent input[type=text], .cmsContent textarea {width:250px;}
 
 .users {padding:10px 15px 10px 35px; background:transparent url(../images/users.png) scroll no-repeat 10px 50%;}
 .questions {padding:10px 15px 10px 35px; background:transparent url(../images/questions.png) scroll no-repeat 10px 50%;}
