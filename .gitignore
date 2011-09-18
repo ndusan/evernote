@@ -1,2 +1,5 @@
 nbproject
-tmp
+tmp/
+config/config.php
+config/config.php.dist
+.DS_Store
