@@ -33,6 +33,7 @@
                 <th>Email</th> 
                 <th>Created</th> 
                 <th>Answers</th>
+                <th>Newsletter</th>
                 <th>IP</th>
                 <th>Client</th> 
             </tr> 

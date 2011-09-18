@@ -24,7 +24,8 @@ class LoginController extends Controller
     {
         
         //Delete session
-        $_SESSION['cms']=null;
+        $_SESSION['cms'] = null;
+        unset($_SESSION['cms']);
         parent::redirect("login", "");
     }
 }
