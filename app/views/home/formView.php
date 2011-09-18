@@ -20,14 +20,14 @@
                             <form action="/form" method="post">
                                 <label for="firstname">First name</label>
                                 <span class="input">
-                                    <input id="firstname" type="text" name="firstname" value=""/>
+                                    <input id="firstname" type="text" name="participant[firstname]" value=""/>
                                 </span>
                         </td>
                         <td>
                             <label for="location">Location</label>
                             <span class="input">
-                                <select name="location" id="location">
-                                    <option value="Serbia">Pick a state</option>
+                                <select name="participant[location]" id="location">
+                                    <option value="none">Pick a state</option>
                                     <option value="Sweden">Sweden</option>
                                     <option value="Serbia">Serbia</option>
                                     <option value="Sweden">Sweden</option>
@@ -41,11 +41,11 @@
                         <td>
                             <label for="lastname">Last name</label>
                             <span class="input">
-                                <input id="lastname" type="text" name="lastname" value=""/>
+                                <input id="lastname" type="text" name="participant[lastname]" value=""/>
                             </span>
                         </td>
                         <td>
-                            <input type="checkbox" name="tac" value="1" /> I agree with <a href="#">Terms & Conditions</a>
+                            <input type="checkbox" name="participant[tac]" value="1" /> I agree with <a href="#">Terms & Conditions</a>
                         </td>
                     </tr>
                     <tr>
@@ -53,12 +53,12 @@
 
                             <label for="email">Email</label>
                             <span class="input">
-                                <input id="email" type="text" name="email" value=""/>
+                                <input id="email" type="text" name="participant[email]" value=""/>
                             </span>
 
                         </td>
                         <td>
-                            <input type="checkbox" name="newsletters" value="1" checked="checked" /> I want to receive <a href="#">visiteurope.com</a> newsletter
+                            <input type="checkbox" name="participant[newsletters]" value="1" checked="checked" /> I want to receive <a href="#">visiteurope.com</a> newsletter
                         </td>
                     </tr>
 
