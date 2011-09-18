@@ -21,8 +21,9 @@
                             <div class="scoreShare">Your score:<br/><span><?= $result['sum']; ?>/10</span></div>
                         </td>
                         <td>
-                            <a href="#" class="fb"></a>
-                            <a href="#" class="tw"></a>
+                            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+                            <a href="http://www.facebook.com/sharer.php?u=<?=BASE_PATH;?>&t=Evernote quiz" class="fb" target="_blank"></a>
+                            <a href="https://twitter.com/share" class="tw twitter-share-button"></a>
                         </td>
                     </tr>
                 </table>
