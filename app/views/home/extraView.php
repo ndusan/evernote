@@ -1,6 +1,6 @@
 <form action="/extra" method="post">
     
-    <textares id="open_choice" name="open_choice"></textarea>
+    <textarea id="open_choice" name="open_choice"></textarea>
     <label for="open_choice">Answer</label>
 
     <!-- security information -->

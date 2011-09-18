@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function extraAction($params)
     {
         //Check if user can go to this page
-        $this->checkAccess('extraPage', 'not_allowed');
+        //$this->checkAccess('extraPage', 'not_allowed');
         
         
         
@@ -74,6 +74,9 @@ class HomeController extends Controller
         
         //Get random question
         $question = $this->db->getExtraQuestion();
+        parent::set('question', null);
+        parent::set('page', $_SESSION['quiz']['page']);
+        parent::set('token', $_SESSION['quiz']['token']);
     }
     
     
@@ -81,12 +84,12 @@ class HomeController extends Controller
     public function formAction($params)
     {
         //Check if user can go to this page
-        $this->checkAccess('formPage', 'not_allowed');
+        //$this->checkAccess('formPage', 'not_allowed');
         
         
         if(!empty($params['participant']) && parent::isAjax()){//data posted
         
-            $this->db->saveParticipan($params['participant'], $_SESSION['quiz']);
+            $this->db->saveParticipant($params['participant'], $_SESSION['quiz']);
             
             //Allow going to form page
             $_SESSION['quiz']['scorePage'] = true;
@@ -99,9 +102,9 @@ class HomeController extends Controller
     public function scoreAction($params)
     {
         //Check if user can go to this page
-        $this->checkAccess('scorePage');
+        //$this->checkAccess('scorePage');
         
-        parent::set('result', $this->db->getParticipanResult($_SESSION['quiz']));
+        parent::set('result', $this->db->getParticipantResult($_SESSION['quiz']));
         
         //Remove session for this user
         $this->clearSession();
