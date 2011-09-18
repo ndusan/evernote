@@ -71,7 +71,7 @@ class Template
 
         if(file_exists('libraries'.DS.'html.class.php')){
                 require_once 'libraries'.DS.'html.class.php';
-                        $html = new HTML;
+                $html = new HTML;
         }
         
         extract($this->variables);

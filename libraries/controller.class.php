@@ -30,7 +30,7 @@ class Controller
                 }
                 
                 //Model file
-                $modelFile = strtolower($controller)."Model.php";
+                $modelFile = ucfirst($controller)."Model.php";
                 $modelName = ucfirst($controller)."Model";
                 
                 //Create model object

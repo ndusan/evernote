@@ -1,3 +1,4 @@
+<? if($displayContent):?>
 <div class="quizWrapper">
     <div class="quizTop">
         <img alt="monograms" title="Monograms - Independent Travel"src="../public/images/monograms.png" />
@@ -43,3 +44,8 @@
         <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>
+<? else: ?>
+<script>
+    document.location.href='<?=BASE_PATH;?>quiz/<?=$link;?>';
+</script>
+<? endif;?>

@@ -4,16 +4,21 @@ class HomeController extends Controller
     
     public function indexAction($params)
     {
-     
-        $this->createParticipant();
+        
     }
-    
     
     
     public function quizAction($params)
     {
+
+        if(isset($params['start']) && $params['start'] == 'quiz'){
+            $this->createParticipant();
+        } 
+        
         if(!parent::checkToken($_SESSION['quiz'])) parent::redirect('', 'session_expire');
        
+        $displayContent = true;
+        
         if(!empty($params['choice']) && parent::isAjax()){//data posted
             
             if(!$this->processStep($params, $_SESSION['quiz'])) parent::redirect('', 'session_expire');
@@ -22,31 +27,29 @@ class HomeController extends Controller
             
             //If end => check if there is need for extra question
             if($_SESSION['quiz']['page'] > 10){
-                
+                $displayContent = false;
                 if($this->goToExtraQuestion($_SESSION['quiz'])){
                     //Allow going to extra page
                     $_SESSION['quiz']['extraPage'] = true;
-                    //parent::redirect ('quiz'.DS.'extra', '');
-                    echo "<script type='text/javascript'>document.location.href='".BASE_PATH."quiz".DS."extra';</script>"; exit;
+                    $link = 'extra';
                 }else{
                     //Allow going to form page
                     $_SESSION['quiz']['formPage'] = true;
-                    //parent::redirect ('quiz'.DS.'form', '');
-                    echo "<script type='text/javascript'>document.location.href='".BASE_PATH."quiz".DS."form';</script>"; exit;
+                    $link = 'form';
                 }
+                parent::set('link', $link);
             }
         }
-        
         
         //Get question
         $question = $this->db->getQuestion($_SESSION['quiz']);
         
+        parent::set('displayContent', $displayContent);
         parent::set('question', $question);
         parent::set('answers', $this->db->getAnswers($question['id']));
         parent::set('page', $_SESSION['quiz']['page']);
         parent::set('token', $_SESSION['quiz']['token']);
     }
-    
     
     
     public function extraAction($params)
@@ -70,7 +73,6 @@ class HomeController extends Controller
     {
         //Check if user can go to this page
         $this->checkAccess('formPage', 'not_allowed');
-        
         
         if(!empty($params['open_choice'])){//data posted
             

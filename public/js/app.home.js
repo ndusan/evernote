@@ -38,10 +38,11 @@ var App = App || {};
                         dataType:   'html',
                         data:       $(this).serialize(),
                         beforeSend: function() {
-                            $('#jquiz').addClass('loader');
+                            $('#jquiz_loader').addClass('loader');
                         },
                         success:    function(response){
-                            $('#jquiz').removeClass('loader').html(response);
+                            $('#jquiz_loader').removeClass('loader');
+                            $('#jquiz').html(response);
                         }
                     });
                 }else{

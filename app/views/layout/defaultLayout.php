@@ -7,11 +7,11 @@
         <meta name="Description" content="" />
         <meta name="Keywords" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
-        <?=$html->assetsJs('jquery-1.6.3.min');?>
-        <?=$html->assetsJs('app');?>
-        <?=$html->customJs(); ?>
-        <?=$html->css('default'); ?>
-        <?=$html->customCss($this->_css);?>
+        <?=@$html->assetsJs('jquery-1.6.3.min');?>
+        <?=@$html->assetsJs('app');?>
+        <?=@$html->customJs(); ?>
+        <?=@$html->css('default'); ?>
+        <?=@$html->customCss($this->_css);?>
         <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     </head>
     <body data-controller="<?=$this->_controller;?>" data-method="<?=$this->_action;?>">
@@ -19,5 +19,6 @@
         <div id="jquiz">
         <? if(file_exists(VIEW_PATH.$this->_controller.DS.$this->_action.'View.php')) include (VIEW_PATH.$this->_controller.DS.$this->_action.'View.php'); ?>
         </div>
+        <div id="jquiz_loader"></div>
     </body>
 </html>

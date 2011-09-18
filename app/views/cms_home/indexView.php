@@ -7,6 +7,7 @@
                 <th>Email</th> 
                 <th>Created</th> 
                 <th>Answers</th>
+                <th>Location</th>
                 <th>Newsletter</th>
                 <th>IP</th>
                 <th style="width: 400px;">Client</th>
@@ -19,7 +20,8 @@
                     <td><?= $participant['lastname']; ?></td> 
                     <td><?= $participant['email']; ?></td> 
                     <td><?= $participant['created']; ?></td> 
-                    <td><?= $participant['correct_amount']; ?>/10</td> 
+                    <td><?= $participant['correct_amount']; ?>/10</td>
+                    <td><?= $participant['location']; ?></td>
                     <td><?= $participant['newsletters'] ? 'Yes' : 'No'; ?></td>
                     <td><?= $participant['ip']; ?></td> 
                     <td><?= $participant['agent']; ?></td> 
@@ -34,6 +36,7 @@
                 <th>Created</th> 
                 <th>Answers</th>
                 <th>Newsletter</th>
+                <th>Location</th>
                 <th>IP</th>
                 <th>Client</th> 
             </tr> 

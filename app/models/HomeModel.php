@@ -77,7 +77,7 @@ class HomeModel extends Model
     {
         try{
             //Page => Level rating
-            $opt = array('1'=>'1', '2'=>'1','3'=>'2','4'=>'2','5'=>'3','6'=>'3','7'=>'4','8'=>'4','9'=>'5','10'=>'5');
+            $opt = array('1'=>'1', '2'=>'1','3'=>'2','4'=>'2','5'=>'3','6'=>'3','7'=>'4','8'=>'4','9'=>'5','10'=>'5', '11' => null);
             
             $realPage = $session['page'];
             $mappingPage = $opt[$realPage];//there are 2pages for same level question

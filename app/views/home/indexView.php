@@ -9,7 +9,7 @@
                 <p>Peek through the pages and answer the questions.</p>
                 <p>Ready to Play?</p>
             </div>
-            <a class="trigger" href="/quiz">start now &raquo;</a>
+            <a class="trigger" href="/quiz?start=quiz">start now &raquo;</a>
         </div>
     </div>
     <div class="quizBottom">

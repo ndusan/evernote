@@ -141,7 +141,7 @@ function hook($routes){
         $controllerName = ucfirst($controller)."Controller";
         
         //Controller file name
-        $controllerFile = strtolower($controller)."Controller.php";
+        $controllerFile = ucfirst($controller)."Controller.php";
         
         //Call default controller
         if(file_exists('libraries'.DS.'controller.class.php')) require_once 'libraries'.DS.'controller.class.php';
