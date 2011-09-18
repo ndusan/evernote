@@ -29,6 +29,8 @@ label {padding:0; cursor:pointer;}
 .fl {float:left;}
 .fr {float:right;}
 
+.noContent {padding:20px 30px; color:#FFF; background-color:#9CC4E4; width:300px; margin:0 auto; text-align:center;}
+.notificator {position:absolute; right:0; bottom:111px; width:100%; text-align:center; font-size:12px; text-transform:uppercase; color:red;}
 /*SPRITE*/
 
 /*BUILD*/
