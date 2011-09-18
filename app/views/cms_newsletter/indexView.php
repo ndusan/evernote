@@ -1,5 +1,5 @@
 <? if (!empty($participantCollection)): ?>
-    <table cellpadding="0" cellspacing="0" border="0" class="display" id="participantsTable"> 
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="newslettersTable"> 
         <thead> 
             <tr> 
                 <th>First name</th> 
@@ -7,7 +7,6 @@
                 <th>Email</th> 
                 <th>Created</th> 
                 <th>Answers</th>
-                <th>Newsletter</th>
                 <th>IP</th>
                 <th style="width: 400px;">Client</th>
             </tr> 
@@ -20,7 +19,6 @@
                     <td><?= $participant['email']; ?></td> 
                     <td><?= $participant['created']; ?></td> 
                     <td><?= $participant['correct_amount']; ?>/10</td> 
-                    <td><?= $participant['newsletters'] ? 'Yes' : 'No'; ?></td>
                     <td><?= $participant['ip']; ?></td> 
                     <td><?= $participant['agent']; ?></td> 
                 </tr> 

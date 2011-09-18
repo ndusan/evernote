@@ -29,6 +29,9 @@
                 <li <?=($this->_controller == 'cms_question' ? 'class="active"' : '');?>>
                     <a class="questions" href="/cms/questions">Questions</a>
                 </li>
+                <li <?=($this->_controller == 'cms_newsletter' ? 'class="active"' : '');?>>
+                    <a class="questions" href="/cms/newsletters">Newsletter</a>
+                </li>
                 <li <?=($this->_controller == 'cms_home' ? 'class="active"' : '');?>>
                     <a class="dashboard" href="/cms">Dashboard</a>
                 </li>

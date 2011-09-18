@@ -232,7 +232,7 @@ class HomeModel extends Model
             $stmt->bindParam(':email', $participant['email'], PDO::PARAM_STR);
             $stmt->bindParam(':location', $participant['location'], PDO::PARAM_STR);
             $stmt->bindParam(':tac', $tac, PDO::PARAM_INT);
-            $stmt->bindParam(':newsletters', $neswletters, PDO::PARAM_INT);
+            $stmt->bindParam(':newsletters', $newsletters, PDO::PARAM_INT);
             $stmt->bindParam(':registered', $registered, PDO::PARAM_STR);
             $stmt->bindParam(':correctAmount', $correctAmount, PDO::PARAM_INT);
             $stmt->bindParam(':token', $session['token'], PDO::PARAM_STR);

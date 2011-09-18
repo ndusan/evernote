@@ -76,6 +76,11 @@ $routes = array(
             'action'     => 'index', 
             'layout'     => 'cms'
     ),
+    array(  'url'        => '/^cms\/newsletters\/?$/', 
+            'controller' => 'cms_newsletter', 
+            'action'     => 'index', 
+            'layout'     => 'cms'
+    ),
     array(  'url'        => '/^cms\/question\/add\/?$/', 
             'controller' => 'cms_question', 
             'action'     => 'add', 
