@@ -23,7 +23,7 @@
                         <td>
                             <form action="/extra" method="post">
                                 <span class="bonusInput">
-                                <input type="text" id="open_choice" name="open_choice" />
+                                <input type="text" id="open_choice" class="r" name="open_choice" />
                                 </span>
 
                                 <!-- security information -->
@@ -36,7 +36,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="notificator">
+            <div class="notificator" id="c1" style="display: none;">
                 Please provide all requested info above.
             </div>
         </div>

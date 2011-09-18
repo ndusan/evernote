@@ -20,19 +20,20 @@
                             <form action="/form" method="post">
                                 <label for="firstname">First name</label>
                                 <span class="input">
-                                    <input id="firstname" type="text" name="participant[firstname]" value=""/>
+                                    <input id="firstname" class="r" type="text" name="participant[firstname]" value=""/>
                                 </span>
                         </td>
                         <td>
                             <label for="location">Location</label>
                             <span class="input">
-                                <select name="participant[location]" id="location">
-                                    <option value="none">Pick a state</option>
-                                    <option value="Sweden">Sweden</option>
-                                    <option value="Serbia">Serbia</option>
-                                    <option value="Sweden">Sweden</option>
-                                    <option value="Serbia">Serbia</option>
-                                    <option value="Sweden">Other</option>
+                                <select class="r" name="participant[location]" id="location">
+                                    <option value="">Pick a state</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Canada (English)">Canada (English)</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Latin America">Latin America</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </span>
                         </td>
@@ -41,11 +42,11 @@
                         <td>
                             <label for="lastname">Last name</label>
                             <span class="input">
-                                <input id="lastname" type="text" name="participant[lastname]" value=""/>
+                                <input class="r" id="lastname" type="text" name="participant[lastname]" value=""/>
                             </span>
                         </td>
                         <td>
-                            <input type="checkbox" name="participant[tac]" value="1" /> I agree with <a href="#">Terms & Conditions</a>
+                            <input id="tac" type="checkbox" name="participant[tac]" value="1" /> I agree with <a href="#">Terms & Conditions</a>
                         </td>
                     </tr>
                     <tr>
@@ -53,7 +54,7 @@
 
                             <label for="email">Email</label>
                             <span class="input">
-                                <input id="email" type="text" name="participant[email]" value=""/>
+                                <input class="r" id="email" type="text" name="participant[email]" value=""/>
                             </span>
 
                         </td>
@@ -68,7 +69,10 @@
                 <input class="trigger" type="submit" name="submit" value="submit&raquo;" />
                 </form>
             </div>
-            <div class="notificator">
+            <div class="notificator" id="c1" style="display:none;">
+                Please, provide personal info 
+            </div>
+            <div class="notificator" id="c2" style="display:none;">
                 You need to accept Terms & Conditions  
             </div>
         </div>

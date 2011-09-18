@@ -49,6 +49,59 @@ var App = App || {};
                     
                 }
             });
+        },
+        
+        form: function() {
+            $('#jquiz').delegate('form', 'submit', function(){
+                
+                var allOk = true, c1 = false, c2 = false;
+                var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                //Default
+                $('#c1').hide();
+                $('#c2').hide();
+                
+                $('.r').each(function(){
+                    if($(this).val().length <=0 || reg.test($('#email').val()) == false){
+                        allOk = false;
+                        c1 = true;
+                    }
+                });
+                if(allOk && ($('#tac').attr("checked") == "undefined" || $('#tac').attr("checked") != "checked")){
+                    allOk = false;
+                    c2 = true;
+                }
+                console.log(c1+':'+c2+':'+allOk);
+                if(c1){
+                    $('#c2').hide();
+                    $('#c1').show();
+                }
+                if(c2){
+                    $('#c1').hide();
+                    $('#c2').show();
+                }
+                
+                if(!allOk) return false;
+            });
+        },
+        
+        extra: function() {
+            $('#jquiz').delegate('form', 'submit', function(){
+                var allOk = true; 
+                
+                $('.r').each(function(){
+                    if($(this).val().length <= 0){
+                        allOk = false;
+                        $('#c1').show();
+                    }
+                });
+                
+                if(!allOk) return false;
+            });
+        },
+        
+        score: function() {
+            
+            
         }
         
         

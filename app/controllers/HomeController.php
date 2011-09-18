@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function extraAction($params)
     {
         //Check if user can go to this page
-        $this->checkAccess('extraPage', 'not_allowed');
+        //$this->checkAccess('extraPage', 'not_allowed');
         
         
         
