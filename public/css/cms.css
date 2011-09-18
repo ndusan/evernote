@@ -61,6 +61,7 @@ select:focus {background-color:#FFF;}
 .users {padding:10px 15px 10px 35px; background:transparent url(../images/users.png) scroll no-repeat 10px 50%;}
 .questions {padding:10px 15px 10px 35px; background:transparent url(../images/questions.png) scroll no-repeat 10px 50%;}
 .dashboard {padding:10px 15px 10px 35px; background:transparent url(../images/dashboard.png) scroll no-repeat 10px 50%;}
+.newsletter {padding:10px 15px 10px 35px; background:transparent url(../images/newsletter.png) scroll no-repeat 10px 50%;}
 
 .addContent {overflow:hidden; padding:20px; background-color:#FFF;}
 .addTop {padding:0 20px 20px; margin:0 0 10px; border-bottom:solid 1px #cdcdcd; overflow:hidden;}
