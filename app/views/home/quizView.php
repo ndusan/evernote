@@ -36,7 +36,10 @@
             <div class="noContent">Sorry, no quiz for you at this time. Come back soon.</div>
 
         <? endif; ?>
-        <div class="quizBottom">
-            2 logos
-        </div>
     </div>
+    <div class="quizBottom">
+        <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
+        <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
+        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
+    </div>
+</div>

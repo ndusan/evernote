@@ -74,6 +74,8 @@
         </div>
     </div>
     <div class="quizBottom">
-        2 logos
+        <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
+        <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
+        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>
