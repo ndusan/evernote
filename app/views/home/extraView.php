@@ -1,11 +1,3 @@
-
-
-
-
-<div class="quizWrapper">
-    <div class="quizTop">
-        <img alt="monograms" title="Monograms - Independent Travel"src="../public/images/monograms.png" />
-    </div>
     <div class="quizEnd">
         <div class="endContent">
             <div class="stepCounter">
@@ -41,9 +33,3 @@
             </div>
         </div>
     </div>
-    <div class="quizBottom">
-        <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
-        <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
-        <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
-    </div>
-</div>

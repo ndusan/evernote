@@ -33,7 +33,7 @@ label {padding:0; cursor:pointer;}
 .notificator {position:absolute; right:0; bottom:95px; width:100%; text-align:center; font-size:12px; text-transform:uppercase; color:red;}
 .endContent .notificator {bottom:35px;}
 .pin {position:absolute; bottom:-50px; right:0;}
-.loader {width:100%; height:600px; background:transparent url(../images/loading.png) scroll no-repeat 50% 50%;}
+.loader {position:absolute; top:0; left:0; width:100%; height:1000px; background:transparent url(../images/loading.png) scroll no-repeat 50% 50%;}
 /*SPRITE*/
 
 /*BUILD*/
