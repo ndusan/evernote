@@ -23,7 +23,7 @@
                         <td>
                             <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
                             <a href="http://www.facebook.com/sharer.php?u=<?=BASE_PATH;?>&t=Evernote quiz" class="fb" target="_blank"></a>
-                            <a href="https://twitter.com/share" class="tw twitter-share-button"></a>
+                            <a href="https://twitter.com/share" class="tw"></a>
                         </td>
                     </tr>
                 </table>
