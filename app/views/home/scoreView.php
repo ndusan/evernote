@@ -18,7 +18,7 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <div class="scoreShare">Your score:<br/><span><?=$result['sum'];?>/10</span></div>
+                            <div class="scoreShare">Your score:<br/><span><?= $result['sum']; ?>/10</span></div>
                         </td>
                         <td>
                             <a href="#" class="fb"></a>
@@ -26,15 +26,15 @@
                         </td>
                     </tr>
                 </table>
-                <a href="<?=BASE_PATH;?>" class="trigger">try again</a>
+                <a href="<?= BASE_PATH; ?>" class="trigger">try again</a>
             </div>
-            
+
         </div>
     </div>
     <div class="quizBottom">
         <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
         <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
-        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
+        <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>
 

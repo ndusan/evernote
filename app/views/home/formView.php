@@ -17,7 +17,7 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <form action="<?=BASE_PATH;?>quiz/score" method="post">
+                            <form action="<?= BASE_PATH; ?>quiz/score" method="post">
                                 <label for="firstname">First name</label>
                                 <span class="input">
                                     <input id="firstname" class="r" type="text" name="participant[firstname]" value=""/>
@@ -46,7 +46,7 @@
                             </span>
                         </td>
                         <td>
-                            <input id="tac" type="checkbox" name="participant[tac]" value="1" /> I agree with <a href="#">Terms & Conditions</a>
+                            <input id="tac" type="checkbox" name="participant[tac]" value="1" /> I agree with <a href="http://visiteurope.lastexitlondon.com/Evernote-Peek-Campaign/Terms---Conditions">Terms & Conditions</a>
                         </td>
                     </tr>
                     <tr>
@@ -59,7 +59,7 @@
 
                         </td>
                         <td>
-                            <input type="checkbox" name="participant[newsletters]" value="1" checked="checked" /> I want to receive <a href="#">visiteurope.com</a> newsletter
+                            <input type="checkbox" name="participant[newsletters]" value="1" checked="checked" /> I want to receive <a href="http://www.visiteurope.com">visiteurope.com</a> newsletter
                         </td>
                     </tr>
 
@@ -80,6 +80,6 @@
     <div class="quizBottom">
         <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
         <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
-        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
+        <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>

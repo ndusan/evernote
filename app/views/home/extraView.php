@@ -21,9 +21,9 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <form action="<?=BASE_PATH;?>quiz/form" method="post">
+                            <form action="<?= BASE_PATH; ?>quiz/form" method="post">
                                 <span class="bonusInput">
-                                <input type="text" id="open_choice" class="r" name="open_choice" />
+                                    <input type="text" id="open_choice" class="r" name="open_choice" />
                                 </span>
 
                                 <!-- security information -->
@@ -44,6 +44,6 @@
     <div class="quizBottom">
         <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
         <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
-        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
+        <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>
