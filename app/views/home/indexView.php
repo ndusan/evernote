@@ -15,6 +15,6 @@
     <div class="quizBottom">
         <img alt="visit europe" title="visit europe" src="../public/images/logoVisiteurope.png" />
         <img alt="evernote" title="evernote" src="../public/images/logoEvernote.png" />
-        <a class="pin" href=""><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
+        <a class="pin" href="http://itunes.apple.com/us/app/evernote-peek/id442151267?mt=8"><img alt="evernote" title="evernote" src="../public/images/pin-and-paper.png" /></a>
     </div>
 </div>
