@@ -30,25 +30,48 @@ label {padding:0; cursor:pointer;}
 .fr {float:right;}
 
 .noContent {padding:20px 30px; color:#FFF; background-color:#9CC4E4; width:300px; margin:0 auto; text-align:center;}
-.notificator {position:absolute; right:0; bottom:111px; width:100%; text-align:center; font-size:12px; text-transform:uppercase; color:red;}
+.notificator {position:absolute; right:0; bottom:95px; width:100%; text-align:center; font-size:12px; text-transform:uppercase; color:red;}
+.endContent .notificator {bottom:35px;}
 /*SPRITE*/
 
 /*BUILD*/
 .quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; height:145px; margin:20px 0 0; padding:65px 0 0; text-align:center;}
 .quizStart {background:transparent url(../images/quizStart_bg.png) scroll no-repeat 50% 0; padding:60px 0 0; height:450px; text-shadow:0 1px 1px #FFF;}
 .quizSteps {background:transparent url(../images/quizSteps_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:550px; text-shadow:0 1px 1px #FFF;}
+.quizEnd {background:transparent url(../images/quizEnd_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:550px; text-shadow:0 1px 1px #FFF;}
 .quizIntro {width:220px; margin:0 auto; position:relative; text-align:center;}
 .quizReady {padding:50px 0;}
 .quizIntro p {font-size:18px; padding:10px 0; line-height:25px;}
 .stepsContent {width:760px; margin:0 auto; position:relative;}
+.endContent {width:760px; height:375px; margin:0 auto; position:relative;}
 .stepCounter {line-height:40px; text-align:right; color:#35a8bd;}
+
+.contentTitle {line-height:40px; text-align:center;}
+.paperContent {position:absolute; width:675px; bottom:30px; left:45px; height:165px;}
 
 .answers {padding:60px 0 0; width:600px; height:220px;}
 .answers li {line-height:50px; padding:0 0 0 75px;}
 .answers li:hover {cursor:pointer; color:#35a8bd;}
 .answers .selected {background:transparent url(../images/selected.png) scroll no-repeat 10px 0;}
 .answers li input[type=radio] {visibility:hidden;}
-.question {line-height:55px; padding:0 0 0 10px;}
+.question {padding:20px 0 0 20px; line-height:20px;}
 .trigger {font-family: 'Architects Daughter', cursive; font-size:26px; color:#474b56; line-height:80px; font-weight:bold; border:none; background:transparent; text-shadow:0 1px 1px #FFF;}
 .trigger:hover {color:#35a8bd; cursor:pointer;}
 .stepsContent .trigger {position:absolute; top:50%; right:10px; margin:-30px 0 0;}
+.endContent .trigger {position:absolute; top:50%; right:10px; margin:-30px 0 0;}
+.scoreShare {font-family:arial,sans-serif; color:#35a8bd; font-size:28px; font-weight:bold; text-align:center;}
+.scoreShare span {font-size:65px;}
+.paperTable {height:145px; width:530px;}
+.paperTable a {color:#61a52c;}
+.paperTable td {padding:0 10px 5px 10px; font-size:12px;}
+.paperTable label {font-family:arial,sans-serif; color:#35a8bd; font-size:14px; font-weight:bold; text-transform:uppercase;}
+input[type=checkbox] {vertical-align:middle;}
+.bonusInput {background:transparent url(../images/bonusInput.png) scroll no-repeat 0 0; overflow:hidden; padding:10px; display:block;}
+.bonusInput input {font-size:40px; background:transparent; width:355px; border:none; font-family:Georgia,serif; }
+.input {background:transparent url(../images/input.png) scroll no-repeat 0 0; overflow:hidden; padding:5px; display:block;}
+.input input, .input select {background:transparent; width:170px; border:none; font-family:Georgia,serif;}
+.tw, .fb {width:220px; height:35px; display:block; background-image: url(../images/social.png); margin:5px 0;}
+.fb {background-position:0 0;}
+.fb:hover {background-position:0 -35px;}
+.tw {background-position:0 -70px;}
+.tw:hover {background-position:0 -105px;}
