@@ -46,7 +46,7 @@ var App = App || {};
                     });
                 }else{
                     //Non answers was selected
-                    
+                    $('#c1').show();
                 }
             });
         },
@@ -70,7 +70,7 @@ var App = App || {};
                     allOk = false;
                     c2 = true;
                 }
-                console.log(c1+':'+c2+':'+allOk);
+                
                 if(c1){
                     $('#c2').hide();
                     $('#c1').show();

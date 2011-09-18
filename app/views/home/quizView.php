@@ -9,7 +9,7 @@
                     Question <span><?= $page; ?></span> of 10
                 </div>
 
-                <form action="/quiz" method="post">
+                <form action="quiz" method="post">
                     <ul class="answers">
                         <? foreach ($answers as $answer): ?>
                             <li>
@@ -23,7 +23,7 @@
                     <input type="hidden" name="page" value="<?= $page; ?>" />
                     <input type="hidden" name="q_id" value="<?= $question['id']; ?>" />
                     <input class="trigger" type="submit" name="submit" value="Next&raquo;" />
-                    <div class="notificator">
+                    <div class="notificator" id="c1" style="display: none;">
                         please pick one answer
                     </div>
                 </form>

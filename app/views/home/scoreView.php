@@ -18,7 +18,7 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <div class="scoreShare">Your score:<br/><span>10/10</span></div>
+                            <div class="scoreShare">Your score:<br/><span><?=$result['sum'];?>/10</span></div>
                         </td>
                         <td>
                             <a href="#" class="fb"></a>
@@ -26,7 +26,7 @@
                         </td>
                     </tr>
                 </table>
-                <input class="trigger" type="submit" name="submit" value="try again" />
+                <a href="<?=BASE_PATH;?>" class="trigger">try again</a>
             </div>
             
         </div>

@@ -21,7 +21,7 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <form action="/extra" method="post">
+                            <form action="<?=BASE_PATH;?>quiz/form" method="post">
                                 <span class="bonusInput">
                                 <input type="text" id="open_choice" class="r" name="open_choice" />
                                 </span>

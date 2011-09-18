@@ -17,7 +17,7 @@
                 <table class="paperTable" cellspacing="0" cellpading="0">
                     <tr>
                         <td>
-                            <form action="/form" method="post">
+                            <form action="<?=BASE_PATH;?>quiz/score" method="post">
                                 <label for="firstname">First name</label>
                                 <span class="input">
                                     <input id="firstname" class="r" type="text" name="participant[firstname]" value=""/>

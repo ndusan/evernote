@@ -216,11 +216,11 @@ class HomeModel extends Model
     public function saveParticipant($participant = array(), $session = array())
     {
         try{
-            $query = sprintf("UPDATE %s SET `firstname`=:firstname, `lastname`=:lastname, `email`=:email, `location`=:location
-                                `tac`=:tac, `newsletters`=:newsletters, `registered`=:registered 
+            $query = sprintf("UPDATE %s SET `firstname`=:firstname, `lastname`=:lastname, `email`=:email, `location`=:location,
+                                `tac`=:tac, `newsletters`=:newsletters, `registered`=:registered, 
                                 `correct_amount`=:correctAmount WHERE `token`=:token", $this->tableParticipant);
             $stmt = $this->dbh->prepare($query);
-
+            
             $tac = (!empty($participant['tac']) ? 1 : 0);
             $newsletters = (!empty($participant['newsletters']) ? 1 : 0);
             $registered = 'known';
@@ -237,7 +237,7 @@ class HomeModel extends Model
             $stmt->bindParam(':correctAmount', $correctAmount, PDO::PARAM_INT);
             $stmt->bindParam(':token', $session['token'], PDO::PARAM_STR);
             $stmt->execute();
-
+            
             return true;
         }catch(Exception $e){
             
@@ -249,13 +249,16 @@ class HomeModel extends Model
     public function getParticipantResult($session = array())
     {
         try{
-            $query = sprintf("SELECT `b`.*, COUNT(`a`.*) AS `sum` FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`participan_id`
-                                WHERE `b`.`token`=:token", $this->tableParticipantQuestion, $this->tableParticipant);
+            $query = sprintf("SELECT COUNT(*) AS `sum` FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`participant_id`
+                                WHERE `b`.`token`=:token AND `a`.`status`=:status AND `a`.`open_answer` IS NULL", $this->tableParticipantQuestion, $this->tableParticipant);
             $stmt = $this->dbh->prepare($query);
             
+            $status = 'correct';
+            
             $stmt->bindParam(':token', $session['token'], PDO::PARAM_STR);
+            $stmt->bindParam(':status', $status, PDO::PARAM_STR);
             $stmt->execute();
-
+            
             return $stmt->fetch();
         }catch(Exception $e){
             
@@ -269,15 +272,18 @@ class HomeModel extends Model
     {
 
         try{
-            $query = sprintf("SELECT COUNT(`a`.*) AS `sum` FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`participan_id`
-                                WHERE `b`.`token`=:token", $this->tableParticipantQuestion, $this->tableParticipant);
+            $query = sprintf("SELECT COUNT(*) AS `sum` FROM %s AS `a` INNER JOIN %s AS `b` ON `b`.`id`=`a`.`participant_id`
+                                WHERE `b`.`token`=:token AND `a`.`status`=:status AND `a`.`open_answer` IS NULL", $this->tableParticipantQuestion, $this->tableParticipant);
             $stmt = $this->dbh->prepare($query);
             
+            $status = 'correct';
+            
             $stmt->bindParam(':token', $session['token'], PDO::PARAM_STR);
+            $stmt->bindParam(':status', $status, PDO::PARAM_STR);
             $stmt->execute();
 
             $result = $stmt->fetch();
-            
+
             return $result['sum'];
         }catch(Exception $e){
             
