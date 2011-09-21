@@ -23,7 +23,7 @@
                         <label for="location">Location</label>
                         <span class="input">
                             <select class="r" name="participant[location]" id="location">
-                                <option value="">Pick a state</option>
+                                <option value="">Choose Location</option>
                                 <option value="Brazil">Brazil</option>
                                 <option value="Canada (English)">Canada (English)</option>
                                 <option value="Japan">Japan</option>
