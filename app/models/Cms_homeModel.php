@@ -9,7 +9,7 @@ class Cms_homeModel extends Model
     public function findParticipants($params)
     {
         try{
-            $query = sprintf("SELECT `a`.* FROM %s AS `a` 
+            $query = sprintf("SELECT `a`.*, `b`.`open_answer` FROM %s AS `a` 
                                 INNER JOIN %s AS `b` ON `b`.`participant_id`=`a`.id
                                 WHERE `a`.`registered`=:registered GROUP BY `a`.`id`",
                                 $this->tableParticipant,

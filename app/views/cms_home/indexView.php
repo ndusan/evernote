@@ -7,6 +7,7 @@
                 <th>Email</th> 
                 <th>Created</th> 
                 <th>Answers</th>
+                <th>Additional answer</th>
                 <th>Location</th>
                 <th>Newsletter</th>
                 <th>IP</th>
@@ -21,6 +22,14 @@
                     <td><?= $participant['email']; ?></td> 
                     <td><?= $participant['created']; ?></td> 
                     <td><?= $participant['correct_amount']; ?>/10</td>
+                    <td><!-- if extra question -->
+                        <? if(!empty($participant['open_answer'])):?>
+                        <?=$participant['open_answer'];?>
+                        <? else:?>
+                        empty
+                        <? endif;?>
+                    </td>
+                    </td>
                     <td><?= $participant['location']; ?></td>
                     <td><?= $participant['newsletters'] ? 'Yes' : 'No'; ?></td>
                     <td><?= $participant['ip']; ?></td> 
@@ -35,6 +44,7 @@
                 <th>Email</th> 
                 <th>Created</th> 
                 <th>Answers</th>
+                <th>Additional answer</th>
                 <th>Newsletter</th>
                 <th>Location</th>
                 <th>IP</th>

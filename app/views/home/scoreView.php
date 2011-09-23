@@ -17,8 +17,19 @@
                             <div class="scoreShare">Your score:<br/><span><?= $result['sum']; ?>/10</span></div>
                         </td>
                         <td>
+                            <?
+                            $fbArray = array('app_id'=>'173565499389909', 
+                                             'link'=>'http://www.visiteurope.com/Peek',
+                                             'picture'=>BASE_PATH.'public/images/logoVisiteurope.png', 
+                                             'name'=>'Visit Europe Quiz',
+                                             'caption'=>'I just got '.$result['sum'].'/10. Can you beat my score?', 
+                                             'description'=>'Click http://visiteurope.lastexitlondon.com/peek to play the quiz and be in a chance to WIN a trip to Europe',
+                                             'message'=>'WIN a trip to Europe', 
+                                             'redirect_uri'=>'http://www.visiteurope.com/Peek');
+                            ?>
+                            </script>
+                            <a href="http://www.facebook.com/dialog/feed?<?=http_build_query($fbArray);?>" class="fb" target="_blank"></a>
                             <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-                            <a href="http://www.facebook.com/sharer.php?u=<?=BASE_PATH;?>&t=Evernote quiz" class="fb" target="_blank"></a>
                             <a href="https://twitter.com/share" class="tw"></a>
                         </td>
                     </tr>
