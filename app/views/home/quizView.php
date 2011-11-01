@@ -1,4 +1,9 @@
-<? if($displayContent):?>
+<script type="text/javascript">
+    $(document).ready( function(){
+        $('.helpClose').click(function(){ $('.help').css('display','none'); });
+    });
+</script>
+<? if ($displayContent): ?>
     <? if (!empty($answers) && !empty($question)): ?>
         <div class="quizSteps">
             <div class="stepsContent">
@@ -33,9 +38,11 @@
             <div class="noContent">Sorry, no quiz for you at this time. Come back soon.</div>
 
         <? endif; ?>
+        <a class="helpClose">X</a>
+        <div class="help"></div>
     </div>
 <? else: ?>
-<script>
-    document.location.href='<?=BASE_PATH;?>quiz/<?=$link;?>';
-</script>
-<? endif;?>
+    <script>
+        document.location.href='<?= BASE_PATH; ?>quiz/<?= $link; ?>';
+    </script>
+<? endif; ?>
