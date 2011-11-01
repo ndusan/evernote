@@ -50,6 +50,8 @@ var App = App || {};
                     $('#c1').show();
                 }
             });
+            
+            $('.helpClose').click(function(){ $('.help').css('display','none'); });
         },
         
         form: function() {
