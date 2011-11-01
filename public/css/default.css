@@ -29,6 +29,8 @@ label {padding:0; cursor:pointer;}
 .fl {float:left;}
 .fr {float:right;}
 .help {display:block; top:350px; left:50%; position:absolute; width:235px; height:320px; background-image:url(../images/help_bg.png);}
+.helpClose {width:100px; height:50px; display:block; background-image:url(../images/help_close.png); position:absolute; right:-50px; top:50px;}
+.trip {position:absolute; top:-10px; right:150px;}
 
 .noContent {padding:20px 30px; color:#FFF; background-color:#9CC4E4; width:300px; margin:0 auto; text-align:center;}
 .notificator {position:absolute; right:0; bottom:95px; width:100%; text-align:center; font-size:12px; text-transform:uppercase; color:red;}
@@ -38,7 +40,7 @@ label {padding:0; cursor:pointer;}
 /*SPRITE*/
 
 /*BUILD*/
-.quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; height:145px; margin:20px 0 0; padding:65px 0 0; text-align:center;}
+.quizTop {background:transparent url(../images/bboard_bg.png) scroll no-repeat 50% 0; position:relative; height:145px; margin:20px auto 0; width:980px; padding:65px 0 0; text-align:center;}
 .quizBottom {width:586px; margin:0 auto; position:relative; padding:0 200px 0 0;}
 .quizStart {background:transparent url(../images/quizStart_bg.png) scroll no-repeat 50% 0; padding:60px 0 0; height:450px; text-shadow:0 1px 1px #FFF;}
 .quizSteps {background:transparent url(../images/quizSteps_bg.png) scroll no-repeat 50% 0; padding:95px 0 0; height:450px; text-shadow:0 1px 1px #FFF;}

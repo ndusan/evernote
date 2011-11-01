@@ -19,7 +19,12 @@
         
         <div class="quizWrapper">
             <div class="quizTop">
-                <a target="_blank" href="http://www.monograms.com"><img alt="monograms" title="Monograms - Independent Travel"src="../public/images/monograms.png" /></a>
+                <a class="trip" target="_blank" href="http://www.visiteurope.com/monograms">
+                <img alt="prize detais" title="prize details"src="../public/images/trip.png" />
+                </a>
+                <a target="_blank" href="http://www.monograms.com">
+                    <img alt="monograms" title="Monograms - Independent Travel"src="../public/images/monograms.png" />
+                </a>
             </div> 
             <div id="jquiz">
             <? if (file_exists(VIEW_PATH . $this->_controller . DS . $this->_action . 'View.php'))

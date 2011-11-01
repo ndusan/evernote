@@ -34,8 +34,8 @@
 
         <? endif; ?>
         <? if($page == 1):?>
-        <a class="helpClose">X</a>
-        <div class="help"></div>
+            
+        <div class="help"><a href="#" class="helpClose"></a></div>
         <? endif; ?>
     </div>
 <? else: ?>
