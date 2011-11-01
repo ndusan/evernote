@@ -30,7 +30,12 @@
                             </script>
                             <a href="http://www.facebook.com/dialog/feed?<?=http_build_query($fbArray);?>" class="fb" target="_blank"></a>
                             <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-                            <a href="https://twitter.com/share" class="tw"></a>
+                            <?
+                            $twitterArray = array('url'=>'http://www.visiteurope.com/Peek',
+                                                  'text'=>'I just got '.$result['sum'].'/10. Can you beat my score? Click http://visiteurope.lastexitlondon.com/peek to play the quiz and be in a chance to WIN a trip to Europe',
+                                                  'counturl'=>'http://www.visiteurope.com/Peek');
+                            ?>
+                            <a href="https://twitter.com/share?<?=http_build_query($twitterArray);?>" class="tw" target="_blank"></a>
                         </td>
                     </tr>
                 </table>
